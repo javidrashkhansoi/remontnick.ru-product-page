@@ -1,0 +1,9 @@
+$layout: 1920 !default;
+$inner: 1320 !default;
+$padding: 16 !default;
+$mobile: 320 !default;
+$container: $inner + $padding * 2;
+
+@function container() {
+  @return $inner + $padding * 2 + px;
+}

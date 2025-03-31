@@ -1,0 +1,12 @@
+@mixin limit-lines($line-count) {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--line-count, #{$line-count});
+
+  display: -webkit-box;
+
+  overflow: hidden;
+
+  * {
+    display: inherit;
+  }
+}

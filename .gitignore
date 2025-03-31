@@ -1,0 +1,16 @@
+/.vscode
+/archives
+/bash
+/custom-data
+/node_modules
+/public
+/types
+
+/.editorconfig
+/dev.todo
+/jsconfig.json
+/project.todo
+/version.json
+
+/copy.sh
+/TODO

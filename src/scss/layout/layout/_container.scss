@@ -1,0 +1,8 @@
+@use "../../variables/variables";
+
+.container {
+  inline-size: 100%;
+  max-inline-size: variables.container();
+  margin-inline: auto;
+  padding-inline: variables.$padding + px;
+}

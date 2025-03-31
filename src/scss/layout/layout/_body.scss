@@ -1,0 +1,9 @@
+@use "../../functions/functions";
+@use "../../variables/variables";
+
+body {
+  font-family: variables.$font-gotham-pro;
+  font-size: functions.responsive-value(16, 14);
+  line-height: 1.5;
+  color: variables.$color-252626;
+}
