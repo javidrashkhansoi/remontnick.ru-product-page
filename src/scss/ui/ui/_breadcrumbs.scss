@@ -1,0 +1,52 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.breadcrumbs {
+  font-size: 12px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  color: variables.$color-999999;
+  pointer-events: none;
+  user-select: none;
+
+  // .breadcrumbs__list
+  &__list {
+  }
+
+  // .breadcrumbs__item
+  &__item {
+    display: inline;
+
+    &:not(:last-child) {
+      margin-inline-end: 6px;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        inline-size: 16px;
+        aspect-ratio: 1 / 1;
+        vertical-align: middle;
+        font-size: 0;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3E%3Cpath fill='%23999' d='m6.67 4-.94.94L8.78 8l-3.05 3.06.94.94 4-4-4-4Z' /%3E%3C/svg%3E%0A");
+        pointer-events: none;
+        user-select: none;
+      }
+    }
+  }
+
+  // .breadcrumbs__link
+  &__link {
+    pointer-events: all;
+    user-select: text;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-hover;
+    }
+  }
+}

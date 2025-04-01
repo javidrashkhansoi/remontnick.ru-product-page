@@ -1,0 +1,69 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.actions {
+  display: flex;
+  align-items: center;
+  align-self: end;
+  gap: 16px;
+}
+
+action-button {
+  display: contents;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@property --icon-heart-fill {
+  syntax: "<color>";
+  initial-value: #{rgba(variables.$color-hover, 0)};
+  inherits: true;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  color: variables.$color-1d1d1d;
+
+  &.active {
+    .action-button__icon {
+      --icon-heart-fill: #{variables.$color-hover};
+
+      color: variables.$color-hover;
+    }
+  }
+
+  @include mixins.hover {
+    .action-button__text {
+      color: variables.$color-hover;
+    }
+  }
+
+  // .action-button__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: --icon-heart-fill, color;
+      transition-duration: 0.3s;
+    }
+  }
+
+  // .action-button__text
+  &__text {
+    @include mixins.prefers-reduced-motion {
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.top {
+  padding-block: functions.responsive-value(31, 24) functions.responsive-value(23, 16);
+
+  // .top__container
+  &__container {
+  }
+
+  // .top__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+}
