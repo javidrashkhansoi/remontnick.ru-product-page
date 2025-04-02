@@ -1,0 +1,28 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-block-size: 44px;
+  padding-block: 5px;
+  padding-inline: 10px;
+  font-size: functions.responsive-value(14, 11);
+  letter-spacing: 0.045em;
+  text-align: center;
+  color: variables.$color-1d1d1d;
+  background-color: variables.$color-hover;
+  border: 1px solid variables.$color-hover;
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: background-color, border-color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    background-color: variables.$color-white;
+    border-color: variables.$color-1d1d1d;
+  }
+}

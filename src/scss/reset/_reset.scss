@@ -130,3 +130,17 @@
 :where(:disabled) {
   cursor: default;
 }
+
+:where(action-button) {
+  display: contents;
+}
+
+:where(tabs-element) {
+  display: contents;
+}
+
+@property --icon-heart-fill {
+  syntax: "<color>";
+  initial-value: #{rgba(#ffb74d, 0)};
+  inherits: true;
+}

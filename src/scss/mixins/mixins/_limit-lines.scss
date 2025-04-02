@@ -4,9 +4,16 @@
 
   display: -webkit-box;
 
+  block-size: calc(var(--line-count, #{$line-count}) * 1lh);
   overflow: hidden;
 
   * {
-    display: inherit;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--line-count, #{$line-count});
+
+    display: -webkit-box;
+
+    block-size: calc(var(--line-count, #{$line-count}) * 1lh);
+    overflow: hidden;
   }
 }

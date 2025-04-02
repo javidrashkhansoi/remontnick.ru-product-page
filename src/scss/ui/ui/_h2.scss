@@ -1,0 +1,10 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.h2 {
+  font-weight: 500;
+  font-size: functions.responsive-value(28, 22);
+  line-height: 1.25;
+  color: variables.$color-1d1d1d;
+}

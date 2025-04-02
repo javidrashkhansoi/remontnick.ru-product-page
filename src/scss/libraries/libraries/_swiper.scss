@@ -12,11 +12,11 @@
 // @use "../../../../node_modules/swiper/modules/grid";
 // @use "../../../../node_modules/swiper/modules/hash-navigation";
 // @use "../../../../node_modules/swiper/modules/history";
-// @use "../../../../node_modules/swiper/modules/keyboard";
+@use "../../../../node_modules/swiper/modules/keyboard";
 // @use "../../../../node_modules/swiper/modules/manipulation";
 // @use "../../../../node_modules/swiper/modules/mousewheel";
-// @use "../../../../node_modules/swiper/modules/navigation";
-// @use "../../../../node_modules/swiper/modules/pagination";
+@use "../../../../node_modules/swiper/modules/navigation";
+@use "../../../../node_modules/swiper/modules/pagination";
 // @use "../../../../node_modules/swiper/modules/parallax";
 // @use "../../../../node_modules/swiper/modules/scrollbar";
 // @use "../../../../node_modules/swiper/modules/thumbs";

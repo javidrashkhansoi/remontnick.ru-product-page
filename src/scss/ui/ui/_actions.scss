@@ -9,20 +9,10 @@
   gap: 16px;
 }
 
-action-button {
-  display: contents;
-}
-
 .action-buttons {
   display: flex;
   align-items: center;
   gap: 16px;
-}
-
-@property --icon-heart-fill {
-  syntax: "<color>";
-  initial-value: #{rgba(variables.$color-hover, 0)};
-  inherits: true;
 }
 
 .action-button {

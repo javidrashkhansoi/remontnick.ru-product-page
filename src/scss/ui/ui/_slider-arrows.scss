@@ -1,0 +1,92 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.slider-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: functions.responsive-value(44, 24);
+  aspect-ratio: 1 / 1;
+  color: variables.$color-1d1d1d;
+  background-color: variables.$color-white;
+  box-shadow:
+    0 11px 15px 0 rgba(195, 196, 198, 0.2),
+    0 9px 46px 0 rgba(195, 196, 198, 0.12),
+    0 24px 38px 0 rgba(195, 196, 198, 0.14);
+  border-radius: 50%;
+  cursor: pointer;
+
+  .products__slider & {
+    position: absolute;
+    inset-block-start: calc(
+      (100cqi - #{functions.responsive-value(32, 16)} * (var(--products-slider-slide-count, 1) - 1)) /
+        var(--products-slider-slide-count, 1) / 2
+    );
+    inset-inline: var(--slider-arrow-left, auto) var(--slider-arrow-right, auto);
+    z-index: 2;
+    transform: translateY(-50%);
+
+    @media (min-width: #{350 + 0.1px}) {
+      --products-slider-slide-count: 1.283018868;
+    }
+
+    @media (min-width: #{550 + 0.1px}) {
+      --products-slider-slide-count: 2;
+    }
+
+    @media (min-width: #{900 + 0.1px}) {
+      --products-slider-slide-count: 3;
+    }
+
+    @media (min-width: #{1250 + 0.1px}) {
+      --products-slider-slide-count: 4;
+    }
+
+    @media (min-width: #{1384 + 0.1px}) {
+      transform: translate(var(--slider-arrow-translate-x), -50%);
+    }
+
+    @media (max-width: 550px) {
+      display: none;
+    }
+  }
+
+  &:is(.swiper-button-disabled, .swiper-button-lock) {
+    display: none;
+  }
+
+  // .slider-arrow--prev
+  &--prev {
+    .products__slider & {
+      --slider-arrow-left: 0;
+      --slider-arrow-translate-x: -50%;
+    }
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  // .slider-arrow--next
+  &--next {
+    .products__slider & {
+      --slider-arrow-right: 0;
+      --slider-arrow-translate-x: 50%;
+    }
+  }
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    color: variables.$color-hover;
+  }
+
+  svg {
+    width: functions.responsive-value(24, 13.09);
+    height: functions.responsive-value(24, 13.09);
+  }
+}

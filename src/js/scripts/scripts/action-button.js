@@ -22,6 +22,7 @@ class ActionButton extends HTMLElement {
 
   disconnectedCallback() {
     this.abortController?.abort();
+
     this.abortController = null;
     this.button = null;
   }
