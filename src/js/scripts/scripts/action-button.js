@@ -1,8 +1,8 @@
 class ActionButton extends HTMLElement {
-  /** @type {AbortController} */
-  abortController;
   /** @type {HTMLButtonElement} */
   button;
+  /** @type {AbortController} */
+  abortController;
 
   constructor() {
     super();
@@ -16,7 +16,7 @@ class ActionButton extends HTMLElement {
 
       this.button.addEventListener('click', (event) => {
         this.button.classList.toggle('active');
-      });
+      }, { signal: this.abortController.signal });
     }
   }
 

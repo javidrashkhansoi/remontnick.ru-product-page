@@ -1,0 +1,14 @@
+<section class="products" id="section-products-@@id" aria-labelledby="title-products-@@id">
+  <div class="products__container container">
+    @@include("blocks/title.html", { "title": "Просмотренные товары", "id": "3" })
+    <products-slider class="products__slider">
+      @@include("blocks/arrow-prev.html")
+      <div class="products-slider swiper">
+        <div class="products-slider__wrapper swiper-wrapper">
+          @@loop("blocks/slide.html", "json/products/similar-viewed.json")
+        </div>
+      </div>
+      @@include("blocks/arrow-next.html")
+    </products-slider>
+  </div>
+</section>

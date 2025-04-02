@@ -1,0 +1,115 @@
+<div class="products-slider__slide swiper-slide">
+  <article class="product-card">
+    <div class="product-card__top">
+      <div class="product-card__badges badges">
+        @@if (discount) {
+        <div class="badges__item badge">-30%</div>
+        }
+        @@if (bestseller) {
+        <div class="badges__item badge">хит продаж</div>
+        }
+        @@if (leftovers) {
+        <div class="badges__item badge badge--white">остатки</div>
+        }
+        @@if (notAvailable) {
+        <div class="badges__item badge badge--white">Нет в наличии</div>
+        }
+        @@if (km2) {
+        <div class="badges__item badge badge--white">КМ2</div>
+        }
+        @@if (hasVideo) {
+        <div class="badges__item badge badge--white">Есть видео</div>
+        }
+      </div>
+      <product-images>
+        <a class="product-card__slider product-images swiper" href="#">
+          <div class="product-images__wrapper swiper-wrapper">
+            <div class="product-images__slide responsive-media swiper-slide">
+              <img src="@img/images/ui/product-card/@@image.jpg" alt="#">
+            </div>
+            <div class="product-images__slide responsive-media swiper-slide">
+              <img src="@img/images/ui/product-card/@@image.jpg" alt="#">
+            </div>
+            <div class="product-images__slide responsive-media swiper-slide">
+              <img src="@img/images/ui/product-card/@@image.jpg" alt="#">
+            </div>
+            <div class="product-images__slide responsive-media swiper-slide">
+              <img src="@img/images/ui/product-card/@@image.jpg" alt="#">
+            </div>
+          </div>
+        </a>
+        <div class="slider-pagination"></div>
+      </product-images>
+    </div>
+    @@if (tabs) {
+    <tabs-element>
+      <div class="product-card__tabs product-tabs">
+        <button class="product-tabs__button active" data-tab="cut">Цена на отрез</button>
+        <button class="product-tabs__button" data-tab="roll">Цена за рулон</button>
+      </div>
+      <div class="product-card__id">
+        <div class="product-id__item">ID: 2345467</div>
+        @@if (productClass) {
+        <div class="product-id__item">Класс: 32</div>
+        }
+      </div>
+      <div class="product-card__price" @@if (oldPrice) { data-old-price="@@oldPrice" } data-panel="cut">@@price</div>
+      <div class="product-card__price" @@if (oldPrice) { data-old-price="@@oldPrice" } data-panel="roll" hidden>@@price</div>
+    </tabs-element>
+    }
+    @@if (!tabs) {
+    <div class="product-card__tabs product-tabs">
+      <div class="product-tabs__button active">Розничная цена</div>
+    </div>
+    <div class="product-card__id">
+      <div class="product-id__item">ID: 2345467</div>
+      @@if (productClass) {
+      <div class="product-id__item">Класс: 32</div>
+      }
+    </div>
+    <div class="product-card__price" @@if (oldPrice) { data-old-price="@@oldPrice" }>@@price</div>
+    }
+    <h3 class="product-card__title">
+      <a href="#">@@title</a>
+    </h3>
+    @@if (length) {
+    <div class="product-card__info product-info">
+      <div class="product-info__item">1.5м</div>
+      <div class="product-info__item">2м</div>
+      <div class="product-info__item">2.5М</div>
+      <div class="product-info__item">3м</div>
+      <div class="product-info__item">3.5М</div>
+      <div class="product-info__item">4м</div>
+    </div>
+    }
+    @@if (info) {
+    <div class="product-card__info product-info">
+      <div class="product-info__item">под плитку</div>
+      <div class="product-info__item">водостойкий</div>
+    </div>
+    }
+    <div class="product-card__actions product-actions">
+      @@if (notAvailable) {
+      <button class="product-actions__button button">Сообщить о появлении</button>
+      }
+      @@if (!notAvailable) {
+      <button class="product-actions__button button">Купить</button>
+      }
+      <action-button>
+        <button class="product-actions__icon" aria-label="В избранное">
+          <svg width="24" height="24" aria-hidden="true">
+            <use xlink:href="#icon-heart"></use>
+          </svg>
+        </button>
+      </action-button>
+      <action-button>
+        <button class="product-actions__icon" aria-label="Сравнение">
+          <svg width="24" height="24" aria-hidden="true">
+            <use xlink:href="#icon-compare"></use>
+          </svg>
+        </button>
+      </action-button>
+      <button class="product-actions__buy" @@if (notAvailable) { disabled }>Купить в один клик</button>
+    </div>
+  </article>
+</div>
