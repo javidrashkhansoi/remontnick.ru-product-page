@@ -5,6 +5,10 @@
   <symbol id="icon-briefcase" viewBox="0 0 24 24" fill="none">
     <path stroke-width="1.6" d="M3 9v11h18V9M3 9V7.4h5.6M3 9l3 4.7h12L21 9m0 0V7.4h-5.6m-6.8 0V4h6.8v3.4m-6.8 0h6.8M12 12v3.4" />
   </symbol>
+  <symbol id="icon-cart" viewBox="0 0 24 24" stroke="none">
+    <path
+      d="M15.55 13a2 2 0 0 0 1.75-1.03l3.58-6.49A1 1 0 0 0 20.01 4H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44A2 2 0 0 0 7 17h12v-2H7l1.1-2h7.45ZM6.16 6h12.15l-2.76 5H8.53L6.16 6ZM7 18a2 2 0 1 0 .01 4A2 2 0 0 0 7 18Zm10 0a2 2 0 1 0 .01 4 2 2 0 0 0-.01-4Z" />
+  </symbol>
   <symbol id="icon-compare" viewBox="0 0 24 24" stroke="none">
     <path d="M4.5 9h2.25v12H4.5zM18 9h2.25v12H18zm-6.75-6h2.25v18h-2.25z" />
   </symbol>

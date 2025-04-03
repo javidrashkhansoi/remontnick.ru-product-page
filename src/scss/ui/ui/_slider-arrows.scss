@@ -18,6 +18,15 @@
   border-radius: 50%;
   cursor: pointer;
 
+  .product-objects & {
+    flex: 0 0 auto;
+
+    &:is(.swiper-button-disabled, .swiper-button-lock) {
+      display: flex;
+      visibility: hidden;
+    }
+  }
+
   .products__slider & {
     position: absolute;
     inset-block-start: calc(

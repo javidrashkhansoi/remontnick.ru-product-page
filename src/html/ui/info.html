@@ -1,0 +1,41 @@
+<section class="product-information" id="section-product-information" aria-labelledby="title-product-information">
+  <h2 class="visually-hidden" id="title-product-information">Информация о товаре</h2>
+  <div class="product-information__container container">
+    <tabs-element>
+      <div class="product-information__buttons info-tabs">
+        <button class="info-tabs__button active" data-tab="about">О товаре</button>
+        <button class="info-tabs__button" data-tab="installation">Монтаж</button>
+        <button class="info-tabs__button" data-tab="objects">Объекты</button>
+        <button class="info-tabs__button" data-tab="leftovers">Остатки</button>
+        <button class="info-tabs__button" data-tab="reviews">
+          <span class="info-tabs__text">Отзывы</span>
+          <span class="info-reviews">
+            <span class="info-reviews__icon" aria-hidden="true">
+              <svg width="24" height="24">
+                <use xlink:href="#icon-star"></use>
+              </svg>
+            </span>
+            <span class="info-reviews__count">4.9/509</span>
+          </span>
+        </button>
+      </div>
+      <div class="product-information__inner">
+        <div class="product-information__panel" data-panel="about">
+          @@include("info/about.html")
+        </div>
+        <div class="product-information__panel" data-panel="installation" hidden>
+          @@include("info/installation.html")
+        </div>
+        <div class="product-information__panel product-information__panel--wide" data-panel="objects" hidden>
+          @@include("info/objects.html")
+        </div>
+        <div class="product-information__panel" data-panel="leftovers" hidden>
+          @@include("info/leftovers.html")
+        </div>
+        <div class="product-information__panel" data-panel="reviews" hidden>
+          @@include("info/reviews.html")
+        </div>
+      </div>
+    </tabs-element>
+  </div>
+</section>
