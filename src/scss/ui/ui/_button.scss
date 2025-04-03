@@ -6,9 +6,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   min-block-size: 44px;
   padding-block: 5px;
-  padding-inline: 10px;
+  padding-inline: var(--button-padding, 10px);
   font-size: functions.responsive-value(14, 11);
   letter-spacing: 0.045em;
   text-align: center;
@@ -16,13 +17,34 @@
   background-color: variables.$color-hover;
   border: 1px solid variables.$color-hover;
 
+  @include mixins.hover {
+    background-color: variables.$color-white;
+    border-color: variables.$color-1d1d1d;
+  }
+
+  // .button--transparent
+  &--transparent {
+    background-color: rgba(variables.$color-hover, 0);
+    border-color: currentColor;
+
+    @include mixins.hover {
+      background-color: variables.$color-hover;
+      border-color: variables.$color-hover;
+    }
+  }
+
   @include mixins.prefers-reduced-motion {
     transition-property: background-color, border-color;
     transition-duration: 0.3s;
   }
 
-  @include mixins.hover {
-    background-color: variables.$color-white;
-    border-color: variables.$color-1d1d1d;
+  // .button__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+  }
+
+  // .button__text
+  &__text {
   }
 }

@@ -8,6 +8,7 @@
   align-items: center;
   inline-size: functions.responsive-value(44, 24);
   aspect-ratio: 1 / 1;
+  font-size: 0;
   color: variables.$color-1d1d1d;
   background-color: variables.$color-white;
   box-shadow:
@@ -58,6 +59,10 @@
 
   // .slider-arrow--prev
   &--prev {
+    .product-hero__arrow & {
+      transform: rotate(90deg);
+    }
+
     .products__slider & {
       --slider-arrow-left: 0;
       --slider-arrow-translate-x: -50%;
@@ -70,6 +75,10 @@
 
   // .slider-arrow--next
   &--next {
+    .product-hero__arrow & {
+      transform: rotate(90deg);
+    }
+
     .products__slider & {
       --slider-arrow-right: 0;
       --slider-arrow-translate-x: 50%;

@@ -17,9 +17,6 @@
     <rect width="1.4" height="1.4" x=".8" y=".3" rx=".7" />
     <path d="M1 2.7h1v4H1z" />
   </symbol>
-  <symbol id="icon-next" viewBox="0 0 16 16" stroke="none">
-    <path d="m6.67 4-.94.94L8.78 8l-3.05 3.06.94.94 4-4-4-4Z" />
-  </symbol>
   <symbol id="icon-offer" viewBox="0 0 24 24" fill="none">
     <path stroke-width="2" d="M8.4 8.4h7.2M8.4 12h7.2m-7.2 3.6h4.5M12 3h8.1v18H3.9V3H12Z" />
   </symbol>

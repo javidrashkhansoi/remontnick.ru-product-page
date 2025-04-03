@@ -1,0 +1,14 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.sections {
+  > *:last-child {
+    margin-block-end: 0;
+  }
+
+  // .sections__collection
+  &__collection {
+    margin-block-end: 48px;
+  }
+}

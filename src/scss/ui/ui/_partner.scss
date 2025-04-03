@@ -1,0 +1,79 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.partner {
+  --button-padding: 16px;
+
+  padding-block: 24px;
+  padding-inline: functions.responsive-value(24, 16);
+  background-color: variables.$color-fff8ed;
+
+  // .partner__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 16px;
+  }
+
+  // .partner__content
+  &__content {
+    > *:last-child {
+      margin-block-end: 0;
+    }
+  }
+
+  // .partner__title
+  &__title {
+    margin-block-end: 16px;
+  }
+
+  // .partner__text
+  &__text {
+    margin-block-end: 16px;
+    font-size: 16px;
+    color: variables.$color-1d1d1d;
+  }
+
+  // .partner__vacancies
+  &__vacancies {
+    > *:last-child {
+      margin-block-end: 0;
+    }
+  }
+}
+
+.vacancies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+
+  // .vacancies__item
+  &__item {
+  }
+
+  // .vacancies__link
+  &__link {
+    display: block;
+    padding-inline: 8px;
+    font-size: 11px;
+    line-height: 2;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: center;
+    color: variables.$color-white;
+    background-color: variables.$color-1d1d1d;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color, background-color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-1d1d1d;
+      background-color: variables.$color-hover;
+    }
+  }
+}

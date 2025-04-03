@@ -1,0 +1,15 @@
+@use "../functions/functions";
+@use "../mixins/mixins";
+@use "../variables/variables";
+
+@property --icon-heart-fill {
+  syntax: "<color>";
+  initial-value: #{rgba(#ffb74d, 0)};
+  inherits: true;
+}
+
+@property --hero-slider-arrow-gradient-color {
+  syntax: "<color>";
+  initial-value: #{variables.$color-white};
+  inherits: true;
+}
