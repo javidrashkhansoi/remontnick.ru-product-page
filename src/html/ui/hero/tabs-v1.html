@@ -1,0 +1,28 @@
+<tabs-element>
+  <div class="product-hero__tabs hero-tabs">
+    <div class="hero-tabs__buttons">
+      <button class="hero-tabs__button active" data-tab="cut">Цена на отрез</button>
+      <button class="hero-tabs__button" data-tab="roll">Цена от 1 рулона</button>
+    </div>
+    <div class="hero-tabs__panels">
+      <div class="hero-tabs__item" data-panel="cut">
+        @@include("form.html", {
+        "id": 1,
+        "oldPrice": "16 060 ₽/м2",
+        "price": "812 ₽/м2",
+        "counterLabel": "Длина отреза:",
+        "sum": "812 руб."
+        })
+      </div>
+      <div class="hero-tabs__item" data-panel="roll" hidden>
+        @@include("form.html", {
+        "id": 2,
+        "oldPrice": "420 ₽/м2",
+        "price": "344 ₽/м2",
+        "counterLabel": "Рулонов:",
+        "sum": "20 640 руб."
+        })
+      </div>
+    </div>
+  </div>
+</tabs-element>

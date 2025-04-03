@@ -1,0 +1,34 @@
+<form class="hero-form" id="hero-form-@@id" action="#">
+  <div class="hero-form__top">
+    <div class="hero-price">
+      <div class="hero-price__label">Цена:</div>
+      <div class="hero-price__value" data-old-price="@@oldPrice">@@price</div>
+    </div>
+    <div class="hero-counter">
+      <div class="hero-counter__label">@@counterLabel</div>
+      <counter-element class="counter">
+        <button class="counter__button counter__button--minus" type="button">-</button>
+        <input class="counter__input" id="counter-number-@@id" name="counter-number-@@id" type="number" inputmode="numeric" value="1" max="10" min="1" step="1">
+        <button class="counter__button counter__button--plus" type="button">+</button>
+      </counter-element>
+    </div>
+  </div>
+  <div class="hero-sum">
+    <div class="hero-sum__row">
+      <div class="hero-sum__label">Итого:</div>
+      <div class="hero-sum__value">@@sum</div>
+    </div>
+    <div class="hero-sum__text">Покупаемое количество товара: 2м × 1м = 2 м2</div>
+  </div>
+  <div class="hero-form__buttons">
+    <button class="button">В корзину</button>
+    <button class="button button--transparent">
+      <span class="button__icon" aria-hidden="true">
+        <svg width="24" height="24">
+          <use xlink:href="#icon-offer"></use>
+        </svg>
+      </span>
+      <span class="button__text">Запросить КП</span>
+    </button>
+  </div>
+</form>
