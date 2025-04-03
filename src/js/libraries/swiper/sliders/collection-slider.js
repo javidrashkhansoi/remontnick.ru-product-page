@@ -34,8 +34,8 @@ class CollectionSlider extends HTMLElement {
           prevEl: this.prev,
         },
         breakpoints: {
-          '769.1': {
-
+          '768.1': {
+            slidesPerView: 5,
           },
         },
         on: {
@@ -43,7 +43,7 @@ class CollectionSlider extends HTMLElement {
             swiper.params.spaceBetween = this.gap;
           },
         },
-        slidesPerView: 5,
+        slidesPerView: 4,
         spaceBetween: this.gap,
       });
     }

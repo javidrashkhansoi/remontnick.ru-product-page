@@ -1,0 +1,94 @@
+<div class="product-hero__tabs hero-tabs">
+  <div class="hero-tabs__buttons">
+    <button class="hero-tabs__button active" data-tab="cut">Цена на отрез</button>
+    <button class="hero-tabs__button" data-tab="roll">Цена от 1 рулона</button>
+  </div>
+  <div class="hero-tabs__panels">
+    <div class="hero-tabs__item" data-panel="cut">
+      <form class="hero-tabs__form hero-form" id="hero-form-1" action="#">
+        <div class="hero-form__prices hero-prices">
+          <div class="hero-prices__label">Цена:</div>
+          <div class="hero-prices__inner">
+            <div class="hero-prices__item hero-prices__item--new">812 ₽/м2</div>
+            <div class="hero-prices__item">16 060 ₽/м2</div>
+          </div>
+        </div>
+        <div class="hero-form__counter hero-counter">
+          <div class="hero-counter__label">Длина отреза:</div>
+          <div class="hero-counter__item counter" data-min="1" data-max="10">
+            <input id="hero-form-1-counter" name="hero-form-1-counter" type="hidden" value="1">
+            <button class="counter__button counter__button--minus" type="button">-</button>
+            <div class="counter__value">1</div>
+            <button class="counter__button counter__button--plus" type="button">+</button>
+          </div>
+        </div>
+        <div class="hero-form__sum hero-sum">
+          <div class="hero-sum__item">Итого: 812 руб.</div>
+          <div class="hero-sum__text">Покупаемое количество товара: 2м × 1м = 2 м2</div>
+        </div>
+        <button class="hero-form__button button">В корзину</button>
+        <div class="hero-form__action hero-actions">
+          <button class="hero-actions__button action-button" type="button" data-action>
+            <span class="action-button__icon action-button__icon--no-fill" aria-hidden="true">
+              <svg width="22" height="22">
+                <use xlink:href="#heart"></use>
+              </svg>
+            </span>
+            <span class="action-button__text">В избранное</span>
+          </button>
+          <button class="hero-actions__button action-button" type="button" data-action>
+            <span class="action-button__icon" aria-hidden="true">
+              <svg width="24" height="24">
+                <use xlink:href="#compare"></use>
+              </svg>
+            </span>
+            <span class="action-button__text">Сравнение</span>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="hero-tabs__item" data-panel="roll" hidden>
+      <form class="hero-tabs__form hero-form" id="hero-form-2" action="#">
+        <div class="hero-form__prices hero-prices">
+          <div class="hero-prices__label">Цена:</div>
+          <div class="hero-prices__inner">
+            <div class="hero-prices__item hero-prices__item--new">344 ₽/м2</div>
+            <div class="hero-prices__item">420 ₽/м2</div>
+          </div>
+        </div>
+        <div class="hero-form__counter hero-counter">
+          <div class="hero-counter__label">Рулонов:</div>
+          <div class="hero-counter__item counter">
+            <input id="hero-form-2-counter" name="hero-form-2-counter" type="hidden" value="1">
+            <button class="counter__button counter__button--minus" type="button">-</button>
+            <div class="counter__value">1</div>
+            <button class="counter__button counter__button--plus" type="button">+</button>
+          </div>
+        </div>
+        <div class="hero-form__sum hero-sum">
+          <div class="hero-sum__item">Итого: 20 640 руб.</div>
+          <div class="hero-sum__text">Покупаемое количество товара: 1 рулон = 30м × 2м = 60 м2</div>
+        </div>
+        <button class="hero-form__button button">В корзину</button>
+        <div class="hero-form__action hero-actions">
+          <button class="hero-actions__button action-button" type="button">
+            <span class="action-button__icon action-button__icon--no-fill" aria-hidden="true">
+              <svg width="22" height="22">
+                <use xlink:href="#heart"></use>
+              </svg>
+            </span>
+            <span class="action-button__text">В избранное</span>
+          </button>
+          <button class="hero-actions__button action-button" type="button">
+            <span class="action-button__icon" aria-hidden="true">
+              <svg width="24" height="24">
+                <use xlink:href="#compare"></use>
+              </svg>
+            </span>
+            <span class="action-button__text">Сравнение</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

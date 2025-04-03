@@ -7,12 +7,28 @@
   align-items: center;
   align-self: end;
   gap: 16px;
+
+  .top & {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .product-hero__content & {
+    @media (min-width: #{768 + 0.1px}) {
+      display: none;
+    }
+  }
 }
 
 .action-buttons {
   display: flex;
   align-items: center;
   gap: 16px;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 }
 
 .action-button {
@@ -36,6 +52,10 @@
     .action-button__text {
       color: variables.$color-hover;
     }
+  }
+
+  @media (max-width: 768px) {
+    margin-inline-end: 12px;
   }
 
   // .action-button__icon

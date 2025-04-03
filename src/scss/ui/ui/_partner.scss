@@ -9,37 +9,109 @@
   padding-inline: functions.responsive-value(24, 16);
   background-color: variables.$color-fff8ed;
 
+  .product-hero__column & {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .product-hero + & {
+    @media (min-width: #{768 + 0.1px}) {
+      display: none;
+    }
+  }
+
   // .partner__inner
   &__inner {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 16px;
+
+    @media (min-width: #{600 + 0.1px}) {
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: #{768 + 0.1px}) {
+      grid-template-areas:
+        "title"
+        "text"
+        "vacancies"
+        "button";
+
+      @media (max-width: 1320px) {
+        justify-items: center;
+      }
+    }
+
+    @media (min-width: #{1320 + 0.1px}) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "title vacancies"
+        "text vacancies"
+        "button vacancies";
+    }
   }
 
   // .partner__content
   &__content {
-    > *:last-child {
-      margin-block-end: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: #{768 + 0.1px}) {
+      display: contents;
+
+      @media (max-width: 1320px) {
+        text-align: center;
+      }
     }
   }
 
   // .partner__title
   &__title {
-    margin-block-end: 16px;
+    @media (min-width: #{768 + 0.1px}) {
+      grid-area: title;
+    }
   }
 
   // .partner__text
   &__text {
-    margin-block-end: 16px;
-    font-size: 16px;
     color: variables.$color-1d1d1d;
+
+    @media (min-width: #{768 + 0.1px}) {
+      grid-area: text;
+    }
+  }
+
+  // .partner__button
+  &__button {
+    .partner__content & {
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+
+    .partner__vacancies & {
+      @media (min-width: #{600 + 0.1px}) {
+        display: none;
+      }
+    }
+
+    @media (min-width: #{768 + 0.1px}) {
+      grid-area: button;
+    }
   }
 
   // .partner__vacancies
   &__vacancies {
-    > *:last-child {
-      margin-block-end: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media (min-width: #{768 + 0.1px}) {
+      display: contents;
     }
   }
 }
@@ -50,12 +122,18 @@
   justify-content: center;
   gap: 8px;
 
+  @media (min-width: #{768 + 0.1px}) {
+    grid-area: vacancies;
+  }
+
   // .vacancies__item
   &__item {
   }
 
   // .vacancies__link
   &__link {
+    --outline-color: #{variables.$color-1d1d1d};
+
     display: block;
     padding-inline: 8px;
     font-size: 11px;

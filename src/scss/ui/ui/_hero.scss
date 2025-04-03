@@ -9,17 +9,23 @@
 
   // .product-hero__inner
   &__inner {
-    container-type: inline-size;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     align-items: start;
     gap: functions.responsive-value(32, 24);
+
+    @media (min-width: #{768 + 0.1px}) {
+      container-type: inline-size;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   // .product-hero__column
   &__column {
     container-type: inline-size;
-    inline-size: calc((100cqi - #{functions.responsive-value(32, 24)}) / 2);
+
+    @media (min-width: #{768 + 0.1px}) {
+      inline-size: calc((100cqi - #{functions.responsive-value(32, 24)}) / 2);
+    }
 
     > *:last-child {
       margin-block-end: 0;
@@ -28,17 +34,23 @@
 
   // .product-hero__sliders
   &__sliders {
-    display: grid;
-    grid-template-columns: calc(512 / 644 * 100cqi) calc(116 / 644 * 100cqi);
-    align-items: start;
-    gap: 16px;
-    margin-block-end: functions.responsive-value(48, 24);
+    @media (min-width: #{768 + 0.1px}) {
+      display: grid;
+      grid-template-columns: calc(512 / 644 * 100cqi) calc(116 / 644 * 100cqi);
+      align-items: start;
+      gap: 16px;
+      margin-block-end: functions.responsive-value(48, 24);
+    }
   }
 
   // .product-hero__thumbs
   &__thumbs {
     position: relative;
     isolation: isolate;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   // .product-hero__arrow
@@ -78,9 +90,34 @@
       transition-duration: 0.3s;
     }
   }
+
+  // .product-hero__content
+  &__content {
+    > *:last-child {
+      margin-block-end: 0;
+    }
+  }
+
+  // .product-hero__title
+  &__title {
+    margin-block-end: functions.responsive-value(8, 16);
+
+    @media (max-width: 768px) {
+      margin-block-start: 8px;
+    }
+  }
+
+  // .product-hero__length
+  &__length {
+    margin-block-end: functions.responsive-value(48, 32);
+  }
 }
 
 .hero-slider {
+  @media (max-width: 768px) {
+    overflow: visible;
+  }
+
   // .hero-slider__wrapper
   &__wrapper {
   }
@@ -93,6 +130,17 @@
 
   // .hero-slider__scrollbar
   &__scrollbar {
+    --swiper-scrollbar-drag-bg-color: #{variables.$color-777777};
+    --swiper-scrollbar-border-radius: 4px;
+
+    block-size: 2px;
+    margin-block-start: 16px;
+    background-color: variables.$color-e5e5e5;
+    border-radius: 4px;
+
+    @media (min-width: #{768 + 0.1px}) {
+      display: none;
+    }
   }
 }
 
@@ -124,5 +172,187 @@
       transition-property: opacity;
       transition-duration: 0.3s;
     }
+  }
+}
+
+.hero-length {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: functions.responsive-value(16, 8);
+
+  // .hero-length__label
+  &__label {
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    color: variables.$color-1d1d1d;
+  }
+
+  // .hero-length__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: functions.responsive-value(16, 8);
+
+    &:has(.hero-length__radio:focus-visible) {
+      outline: 2px solid variables.$color-1d1d1d;
+      outline-offset: 2px;
+    }
+  }
+
+  // .hero-length__item
+  &__item {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+
+    &[data-tooltip] {
+      &:hover {
+        &::before,
+        &::after {
+          opacity: 1;
+          visibility: inherit;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset-block-end: 100%;
+        inset-inline-start: 50%;
+        z-index: 1;
+        border-block-start: 6px solid variables.$color-1d1d1d;
+        border-inline: 6px solid rgba(variables.$color-1d1d1d, 0);
+        opacity: 0;
+        transform: translateX(-50%);
+        visibility: hidden;
+        pointer-events: none;
+
+        @include mixins.prefers-reduced-motion {
+          transition-property: opacity, visibility;
+          transition-duration: 0.3s;
+        }
+      }
+
+      &::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        inset-block-end: calc(100% + 5px);
+        inset-inline-start: calc(-1 * var(--tooltip-left) + 16px);
+        z-index: 1;
+        inline-size: calc(100vw - 32px);
+        padding: 8px;
+        font-size: 14px;
+        line-height: 1.43;
+        letter-spacing: 0.01em;
+        text-align: start;
+        color: variables.$color-white;
+        background-color: variables.$color-1d1d1d;
+        border-radius: 4px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        @include mixins.prefers-reduced-motion {
+          transition-property: opacity, visibility;
+          transition-duration: 0.3s;
+        }
+
+        @media (min-width: #{768 + 0.1px}) {
+          inset-inline-start: 50%;
+          inline-size: 225px;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  // .hero-length__badge
+  &__badge {
+    padding-inline: 4px;
+    font-size: 11px;
+    line-height: 2;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: center;
+    color: variables.$color-1d1d1d;
+    background-color: variables.$color-ffe0b2;
+    pointer-events: none;
+  }
+
+  // .hero-length__main
+  &__main {
+  }
+
+  // .hero-length__radio
+  &__radio {
+  }
+}
+
+.length {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-inline: 4px;
+  font-size: 11px;
+  line-height: 2;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  color: variables.$color-1d1d1d;
+  background-color: variables.$color-ededed;
+  cursor: pointer;
+
+  &:has(~ .hero-length__radio:checked) {
+    &::after {
+      background-color: variables.$color-fb8c00;
+    }
+  }
+
+  @include mixins.hover {
+    &::after {
+      background-color: rgba(variables.$color-fb8c00, 0.5);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    z-index: -1;
+    block-size: 2px;
+    font-size: 0;
+    background-color: rgba(variables.$color-fb8c00, 0);
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: background-color;
+      transition-duration: 0.3s;
+    }
+  }
+
+  // .length__text
+  &__text {
+    position: relative;
+    z-index: 1;
+  }
+
+  // .length__icon
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    inline-size: 13px;
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+    color: variables.$color-999999;
+    border: 1px solid;
+    border-radius: 50%;
   }
 }

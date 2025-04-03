@@ -11,4 +11,16 @@
   white-space: nowrap;
   color: variables.$color-1d1d1d;
   background-color: variables.$color-ffe0b2;
+
+  .actions & {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .product-hero__content & {
+    @media (min-width: #{768 + 0.1px}) {
+      display: none;
+    }
+  }
 }

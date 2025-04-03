@@ -1,25 +1,29 @@
-<div class="actions">
-  <div class="action-buttons">
-    <action-button>
-      <button class="action-button">
-        <span class="action-button__icon" aria-hidden="true">
-          <svg width="24" height="24">
-            <use xlink:href="#icon-heart"></use>
-          </svg>
-        </span>
-        <span class="action-button__text">В избранное</span>
-      </button>
-    </action-button>
-    <action-button>
-      <button class="action-button">
-        <span class="action-button__icon" aria-hidden="true">
-          <svg width="24" height="24">
-            <use xlink:href="#icon-compare"></use>
-          </svg>
-        </span>
-        <span class="action-button__text">Сравнение</span>
-      </button>
-    </action-button>
+<movable-element target="hero-content">
+  <div class="actions">
+    <div class="action-buttons">
+      <action-button>
+        <button class="action-button">
+          <span class="action-button__icon" aria-hidden="true">
+            <svg width="24" height="24">
+              <use xlink:href="#icon-heart"></use>
+            </svg>
+          </span>
+          <span class="action-button__text">В избранное</span>
+        </button>
+      </action-button>
+      <action-button>
+        <button class="action-button">
+          <span class="action-button__icon" aria-hidden="true">
+            <svg width="24" height="24">
+              <use xlink:href="#icon-compare"></use>
+            </svg>
+          </span>
+          <span class="action-button__text">Сравнение</span>
+        </button>
+      </action-button>
+    </div>
+    <movable-element target="hero-content" to="start">
+      <div class="product-id">ID: 2345467</div>
+    </movable-element>
   </div>
-  <div class="product-id">ID: 2345467</div>
-</div>
+</movable-element>

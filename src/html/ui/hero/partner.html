@@ -3,16 +3,18 @@
     <div class="partner__content">
       <h2 class="partner__title h2" id="title-partner">Станьте партнером</h2>
       <p class="partner__text">Познакомимся, рассчитаем индивидуальные условия и пришлем прайс.</p>
-      <button class="button button--transparent">
-        <span class="button__icon" aria-hidden="true">
-          <svg width="24" height="24">
-            <use xlink:href="#icon-briefcase"></use>
-          </svg>
-        </span>
-        <span class="button__text">Стать партнером</span>
-      </button>
+      <movable-element target="partner-vacancies" media="(max-width: 600px)">
+        <button class="partner__button button button--transparent">
+          <span class="button__icon" aria-hidden="true">
+            <svg width="24" height="24">
+              <use xlink:href="#icon-briefcase"></use>
+            </svg>
+          </span>
+          <span class="button__text">Стать партнером</span>
+        </button>
+      </movable-element>
     </div>
-    <div class="partner__vacancies">
+    <div class="partner__vacancies" id="partner-vacancies">
       <ul class="vacancies">
         <li class="vacancies__item">
           <a class="vacancies__link" href="#">Директор</a>

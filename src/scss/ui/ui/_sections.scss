@@ -3,6 +3,11 @@
 @use "../../variables/variables";
 
 .sections {
+  @media (max-width: 768px) {
+    padding-block-start: 48px;
+    padding-inline: 16px;
+  }
+
   > *:last-child {
     margin-block-end: 0;
   }

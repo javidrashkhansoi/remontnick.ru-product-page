@@ -59,11 +59,11 @@ class HeroSliders extends HTMLElement {
           swiper: this.thumbs,
         },
         breakpoints: {
-          '769.1': {
-
+          '768.1': {
+            slidesPerView: 1,
           },
         },
-        // slidesPerView: 1,
+        slidesPerView: 1.283018868,
         spaceBetween: 16,
       });
     }
