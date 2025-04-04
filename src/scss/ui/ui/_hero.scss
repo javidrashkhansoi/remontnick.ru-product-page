@@ -116,6 +116,15 @@
   &__tabs {
     margin-block-end: functions.responsive-value(48, 12);
   }
+
+  // .product-hero__info
+  &__info {
+    margin-block-end: 48px;
+
+    @media (max-width: 768px) {
+      margin-block-start: 48px;
+    }
+  }
 }
 
 .hero-slider {
@@ -592,6 +601,100 @@
     font-size: functions.responsive-value(12, 10);
     line-height: 1.1;
     letter-spacing: 0.03em;
+    color: variables.$color-777777;
+  }
+}
+
+.hero-info {
+  padding: 24px;
+  background-color: variables.$color-f6f6f6;
+
+  &:has(.hero-info__item) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+  }
+
+  > *:last-child {
+    margin-block-end: 0;
+  }
+
+  // .hero-info__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    > *:last-child {
+      margin-block-end: 0;
+    }
+  }
+
+  // .hero-info__label
+  &__label {
+    margin-block-end: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+    color: variables.$color-black;
+  }
+
+  // .hero-info__list
+  &__list {
+    flex: 1 1 auto;
+    margin-block-end: 8px;
+  }
+
+  // .hero-info__action
+  &__action {
+    align-self: start;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    text-align: start;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: variables.$color-fb8c00;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-1d1d1d;
+    }
+  }
+
+  // .hero-info__buttons
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+}
+
+.info-list {
+  font-size: 16px;
+
+  // .info-list__item
+  &__item {
+    &:not(:last-child) {
+      margin-block-end: 8px;
+    }
+  }
+
+  // .info-list__label
+  &__label {
+    display: inline;
+    color: variables.$color-1d1d1d;
+
+    &::after {
+      content: " ";
+    }
+  }
+
+  // .info-list__text
+  &__text {
+    display: inline;
     color: variables.$color-777777;
   }
 }
