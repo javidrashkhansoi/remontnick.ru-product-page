@@ -1,0 +1,49 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.searched {
+  @media (max-width: 768px) {
+    padding-block: 24px;
+    padding-inline: 16px;
+  }
+
+  // .searched__title
+  &__title {
+    margin-block-end: 24px;
+  }
+
+  // .searched__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
+
+  // .searched__item
+  &__item {
+  }
+
+  // .searched__link
+  &__link {
+    display: block;
+    padding-inline: 4px;
+    font-size: functions.responsive-value(11, 9);
+    line-height: 2;
+    letter-spacing: 0.155em;
+    text-transform: uppercase;
+    text-align: center;
+    color: variables.$color-1d1d1d;
+    background-color: rgba(255, 183, 77, 0.24);
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: background-color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      background-color: variables.$color-hover;
+    }
+  }
+}
