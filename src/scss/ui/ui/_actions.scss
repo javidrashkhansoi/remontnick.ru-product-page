@@ -27,7 +27,9 @@
   gap: 16px;
 
   @media (max-width: 768px) {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    inline-size: 100%;
   }
 }
 
@@ -52,10 +54,6 @@
     .action-button__text {
       color: variables.$color-hover;
     }
-  }
-
-  @media (max-width: 768px) {
-    margin-inline-end: 12px;
   }
 
   // .action-button__icon
