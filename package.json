@@ -33,7 +33,6 @@
     "browser-sync": "^2.29.3",
     "css-loader": "^6.8.1",
     "del": "^7.1.0",
-    "fslightbox": "^3.5.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
