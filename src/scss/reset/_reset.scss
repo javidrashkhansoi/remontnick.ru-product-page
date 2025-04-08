@@ -147,7 +147,7 @@ div:has(> section.product-hero) {
   padding-inline: 0 !important;
 }
 
-section.container {
+section > div.container {
   inline-size: 100% !important;
   max-inline-size: 1352px !important;
   margin-inline: auto !important;
