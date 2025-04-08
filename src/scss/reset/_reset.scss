@@ -138,3 +138,35 @@
 :where(tabs-element) {
   display: contents;
 }
+
+main.main.wrapper {
+  padding-inline: 0 !important;
+}
+
+div:has(> section.product-hero) {
+  padding-inline: 0 !important;
+}
+
+section.container {
+  inline-size: 100% !important;
+  max-inline-size: 1352px !important;
+  margin-inline: auto !important;
+  padding-inline: 16px !important;
+}
+
+section > h1.h1 {
+  margin: 0 !important;
+  margin-block-end: max(8px, 16px + -8 * ((100vw - 320px) / 1032)) !important;
+  font-weight: 500 !important;
+  font-size: min(28px, 22px + 6 * ((100vw - 320px) / 1032)) !important;
+  line-height: 1.25 !important;
+  color: #1d1d1d !important;
+
+  @media (max-width: 768px) {
+    margin-block-start: 8px !important;
+  }
+}
+
+label.length {
+  margin: 0 !important;
+}
