@@ -24,10 +24,10 @@
 // @use "../../../../node_modules/swiper/modules/zoom";
 
 .swiper {
-  margin: 0;
-  user-select: none;
+  margin: 0 !important;
+  user-select: none !important;
 }
 
 .swiper-slide {
-  block-size: auto;
+  block-size: auto !important;
 }
