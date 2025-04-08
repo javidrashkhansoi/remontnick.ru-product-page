@@ -154,7 +154,7 @@ section > div.container {
   padding-inline: 16px !important;
 }
 
-section > h1.h1 {
+section :is(h1, div).h1 {
   margin: 0 !important;
   margin-block-end: max(8px, 16px + -8 * ((100vw - 320px) / 1032)) !important;
   font-weight: 500 !important;
