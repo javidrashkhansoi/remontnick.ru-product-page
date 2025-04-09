@@ -120,6 +120,10 @@
   // .product-hero__info
   &__info {
     margin-block-end: 48px;
+
+    @media (max-width: 768px) {
+      margin-block-start: 48px;
+    }
   }
 }
 
@@ -283,7 +287,7 @@
   // .hero-length__badge
   &__badge {
     padding-inline: 4px;
-    font-size: 11px;
+    font-size: 12px; // 11px
     line-height: 2;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -310,7 +314,7 @@
   justify-content: space-between;
   gap: 4px;
   padding-inline: 4px;
-  font-size: 11px;
+  font-size: 12px; // 12px
   line-height: 2;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -595,7 +599,7 @@
 
   // .hero-sum__text
   &__text {
-    font-size: functions.responsive-value(12, 10);
+    font-size: 12px; // functions.responsive-value(12, 10)
     line-height: 1.1;
     letter-spacing: 0.03em;
     color: variables.$color-777777;

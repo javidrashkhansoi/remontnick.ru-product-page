@@ -8,7 +8,7 @@
   align-self: end;
   gap: 16px;
 
-  .top & {
+  .product-hero__container > & {
     @media (max-width: 768px) {
       display: none;
     }
@@ -18,6 +18,10 @@
     @media (min-width: #{768 + 0.1px}) {
       display: none;
     }
+  }
+
+  @media (min-width: #{768 + 0.1px}) {
+    justify-content: end;
   }
 }
 

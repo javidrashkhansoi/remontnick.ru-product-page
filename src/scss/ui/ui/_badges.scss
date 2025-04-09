@@ -15,7 +15,7 @@
 
 .badge {
   padding-inline: 4px;
-  font-size: functions.responsive-value(12, 10);
+  font-size: 12px; // functions.responsive-value(12, 10)
   line-height: 1.1;
   letter-spacing: 0.03em;
   color: variables.$color-1d1d1d;

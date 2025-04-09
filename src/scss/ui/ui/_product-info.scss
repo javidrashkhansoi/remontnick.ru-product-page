@@ -261,7 +261,7 @@
     align-items: center;
     min-block-size: 21px;
     padding-inline: 4px;
-    font-size: functions.responsive-value(11, 9);
+    font-size: 12px; // functions.responsive-value(11, 9)
     letter-spacing: 0.155em;
     text-transform: uppercase;
     color: variables.$color-1d1d1d;

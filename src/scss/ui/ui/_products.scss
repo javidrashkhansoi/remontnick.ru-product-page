@@ -214,7 +214,7 @@
 
   // .product-class__item
   &__item {
-    font-size: functions.responsive-value(12, 10);
+    font-size: 12px; // functions.responsive-value(12, 10)
     line-height: 1.1;
     letter-spacing: 0.03em;
     color: rgba(29, 29, 29, 0.6);
@@ -230,7 +230,7 @@
   // .product-info__item
   &__item {
     padding-inline: 4px;
-    font-size: functions.responsive-value(11, 9);
+    font-size: 12px; // functions.responsive-value(11, 9)
     line-height: 2;
     letter-spacing: 0.155em;
     text-transform: uppercase;
@@ -280,7 +280,7 @@
     min-block-size: functions.responsive-value(37, 32);
     padding-block: 5px;
     padding-inline: 10px;
-    font-size: functions.responsive-value(14, 11);
+    font-size: functions.responsive-value(14, 12, $behavior: "fixed-both"); // functions.responsive-value(14, 11)
     letter-spacing: 0.045em;
     text-align: center;
     text-decoration: underline;
