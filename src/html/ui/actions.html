@@ -1,3 +1,4 @@
+@@if (buttons) {
 <movable-element target="hero-info" to="before">
   <div class="actions">
     <div class="action-buttons">
@@ -27,3 +28,10 @@
     </movable-element>
   </div>
 </movable-element>
+}
+
+@@if (!buttons) {
+<movable-element target="hero-content" to="start">
+  <div class="product-id">ID: 2345467</div>
+</movable-element>
+}

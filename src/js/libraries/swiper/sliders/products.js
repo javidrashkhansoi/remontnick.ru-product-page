@@ -54,7 +54,6 @@ class ProductsSlider extends HTMLElement {
         },
         slidesPerView: 1,
         spaceBetween: this.gap,
-        rewind: true,
       });
     }
   }

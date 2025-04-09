@@ -3,7 +3,11 @@
 @use "../../variables/variables";
 
 .top {
-  padding-block: functions.responsive-value(31, 24) functions.responsive-value(23, 16);
+  padding-block: functions.responsive-value(31, 24) 8px;
+
+  @media (max-width: 768px) {
+    padding-block-end: functions.responsive-value(23, 16);
+  }
 
   // .top__container
   &__container {

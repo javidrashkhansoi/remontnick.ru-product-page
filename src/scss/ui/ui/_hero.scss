@@ -16,6 +16,7 @@
     @media (min-width: #{768 + 0.1px}) {
       container-type: inline-size;
       grid-template-columns: repeat(2, 1fr);
+      margin-block-start: functions.responsive-value(16, 8);
     }
   }
 

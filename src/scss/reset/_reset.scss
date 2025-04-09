@@ -170,3 +170,7 @@ section :is(h1, div).h1 {
 label.length {
   margin: 0 !important;
 }
+
+section:has(.swiper) {
+  user-select: none;
+}

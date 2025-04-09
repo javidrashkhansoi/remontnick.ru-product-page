@@ -44,8 +44,8 @@
     @@if (tabs) {
     <tabs-element>
       <div class="product-card__tabs product-tabs">
-        <button class="product-tabs__button active" data-tab="cut">Цена на отрез</button>
-        <button class="product-tabs__button" data-tab="roll">Цена за рулон</button>
+        <button class="product-tabs__button active" data-tab="roll">Цена за рулон</button>
+        <button class="product-tabs__button" data-tab="cut">Цена на отрез</button>
       </div>
       <div class="product-card__class product-class">
         <div class="product-class__item">ID: 2345467</div>
@@ -53,8 +53,8 @@
         <div class="product-class__item">Класс: 32</div>
         }
       </div>
-      <div class="product-card__price" @@if (oldPrice) { data-old-price="@@oldPrice" } data-panel="cut">@@price</div>
-      <div class="product-card__price" data-old-price="220 руб." data-panel="roll" hidden>190 руб./шт.</div>
+      <div class="product-card__price" data-old-price="220 руб." data-panel="roll">190 руб./шт.</div>
+      <div class="product-card__price" @@if (oldPrice) { data-old-price="@@oldPrice" } data-panel="cut" hidden>@@price</div>
     </tabs-element>
     }
     @@if (!tabs) {

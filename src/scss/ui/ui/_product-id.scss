@@ -23,4 +23,14 @@
       display: none;
     }
   }
+
+  .actions & {
+    @media (min-width: #{768 + 0.1px}) {
+      margin-inline-start: 0;
+    }
+  }
+
+  @media (min-width: #{768 + 0.1px}) {
+    margin-inline-start: auto;
+  }
 }
