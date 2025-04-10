@@ -11,7 +11,7 @@
 
   // .products__title
   &__title {
-    margin-block-end: functions.responsive-value(32, 24);
+    --h2-margin-bottom: #{functions.responsive-value(32, 24)};
   }
 
   // .products__slider
@@ -145,7 +145,7 @@
 }
 
 .product-tabs {
-  tabs-element & {
+  &:has(.product-tabs__button:nth-child(2)) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -157,6 +157,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    inline-size: 100%;
     min-block-size: 32px;
     padding-block: 5px;
     padding-inline: 10px;

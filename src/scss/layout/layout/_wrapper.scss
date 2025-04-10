@@ -1,4 +1,4 @@
-.wrapper {
+.wrapper:not(.main)[data-wrapper] {
   position: relative;
   display: flex;
   flex-direction: column;

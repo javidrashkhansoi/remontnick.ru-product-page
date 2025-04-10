@@ -157,13 +157,75 @@ section > div.container {
 section :is(h1, div).h1 {
   margin: 0 !important;
   margin-block-end: max(8px, 16px + -8 * ((100vw - 320px) / 1032)) !important;
+  font-family: "Gotham Pro", sans-serif !important;
   font-weight: 500 !important;
   font-size: min(28px, 22px + 6 * ((100vw - 320px) / 1032)) !important;
   line-height: 1.25 !important;
+  letter-spacing: 0 !important;
   color: #1d1d1d !important;
 
   @media (max-width: 768px) {
     margin-block-start: 8px !important;
+  }
+}
+
+section :is(h2, div).h2 {
+  margin: 0 !important;
+  margin-block-end: var(--h2-margin-bottom) !important;
+  font-family: "Gotham Pro", sans-serif !important;
+  font-weight: 500 !important;
+  font-size: min(28px, 22px + 6 * ((100vw - 320px) / 1032)) !important;
+  line-height: 1.25 !important;
+  color: #1d1d1d !important;
+}
+
+section :is(h3, div).h3 {
+  margin: 0 !important;
+  font-family: "Gotham Pro", sans-serif !important;
+  font-weight: 500 !important;
+  font-size: min(16px, 14px + 2 * ((100vw - 320px)/1032)) !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0.01em !important;
+  color: #252626 !important;
+}
+
+:is(section, article) :is(h3, div, p).product-card__title {
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: var(--line-count, 3) !important;
+
+  display: -webkit-box !important;
+
+  block-size: calc(var(--line-count, 3 * 1lh)) !important;
+  margin-block-end: max(12px, 31px + -19 * ((100vw - 320px) / 1032)) !important;
+  font-family: "Gotham Pro", sans-serif !important;
+  font-size: min(16px, 12px + 4 * ((100vw - 320px) / 1032)) !important;
+  font-weight: 400 !important;
+  line-height: 1.31 !important;
+  letter-spacing: 0.01em !important;
+  color: #1d1d1d !important;
+  overflow: hidden !important;
+
+  * {
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: var(--line-count, 3) !important;
+
+    display: -webkit-box !important;
+
+    block-size: calc(var(--line-count, 3) * 1lh) !important;
+    overflow: hidden !important;
+  }
+
+  a {
+    @media (prefers-reduced-motion: no-preference) {
+      transition-property: color !important;
+      transition-duration: 0.3s !important;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: #ffb74d !important;
+      }
+    }
   }
 }
 
@@ -173,4 +235,18 @@ label.length {
 
 section:has(.swiper) {
   user-select: none;
+}
+
+button {
+  font-family: "Gotham Pro", sans-serif !important;
+  font-weight: var(--button-font-weight, 400) !important;
+  text-transform: none !important;
+}
+
+button:is(.compare, .compare-check) {
+  inline-size: min(24px, 16px + 8 * ((100vw - 320px) / 1032)) !important;
+  block-size: min(24px, 16px + 8 * ((100vw - 320px) / 1032)) !important;
+  background-position: center !important;
+  background-size: 100% auto !important;
+  background-repeat: no-repeat !important;
 }
