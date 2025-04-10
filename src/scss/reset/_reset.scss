@@ -103,7 +103,7 @@
   vertical-align: top;
 }
 
-:where(svg) {
+.main :where(svg) {
   fill: currentColor;
   stroke: currentColor;
 }
@@ -233,8 +233,16 @@ label.length {
   margin: 0 !important;
 }
 
+section {
+  font-family: "Gotham Pro", sans-serif !important;
+}
+
 section:has(.swiper) {
   user-select: none;
+}
+
+article {
+  padding: 0 !important;
 }
 
 button {
@@ -246,7 +254,5 @@ button {
 button:is(.compare, .compare-check) {
   inline-size: min(24px, 16px + 8 * ((100vw - 320px) / 1032)) !important;
   block-size: min(24px, 16px + 8 * ((100vw - 320px) / 1032)) !important;
-  background-position: center !important;
-  background-size: 100% auto !important;
-  background-repeat: no-repeat !important;
+  background: none !important;
 }

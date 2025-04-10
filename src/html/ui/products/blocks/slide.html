@@ -3,22 +3,22 @@
     <div class="product-card__top">
       <div class="product-card__badges badges">
         @@if (discount) {
-        <div class="badges__item badge">-30%</div>
+        <div class="badges__item">-30%</div>
         }
         @@if (bestseller) {
-        <div class="badges__item badge">хит продаж</div>
+        <div class="badges__item">хит продаж</div>
         }
         @@if (leftovers) {
-        <div class="badges__item badge badge--white">остатки</div>
+        <div class="badges__item badges__item--white">остатки</div>
         }
         @@if (notAvailable) {
-        <div class="badges__item badge badge--white">Нет в наличии</div>
+        <div class="badges__item badges__item--white">Нет в наличии</div>
         }
         @@if (km2) {
-        <div class="badges__item badge badge--white">КМ2</div>
+        <div class="badges__item badges__item--white">КМ2</div>
         }
         @@if (hasVideo) {
-        <div class="badges__item badge badge--white">Есть видео</div>
+        <div class="badges__item badges__item--white">Есть видео</div>
         }
       </div>
       <product-images class="product-card__slider">
@@ -53,8 +53,16 @@
         <div class="product-class__item">Класс: 32</div>
         }
       </div>
-      <div class="product-card__price" data-old-price="220 руб." data-panel="roll">190 руб./шт.</div>
-      <div class="product-card__price" @@if (oldPrice) { data-old-price="@@oldPrice" } data-panel="cut" hidden>@@price</div>
+      <div class="product-card__price product-price" data-panel="roll">
+        <div class="product-price__value">190 руб./шт.</div>
+        <div class="product-price__value">220 руб.</div>
+      </div>
+      <div class="product-card__price product-price" data-panel="cut" hidden>
+        <div class="product-price__value">@@price</div>
+        @@if (oldPrice) {
+        <div class="product-price__value">@@oldPrice</div>
+        }
+      </div>
     </tabs-element>
     }
     @@if (!tabs) {
@@ -67,7 +75,12 @@
       <div class="product-class__item">Класс: 32</div>
       }
     </div>
-    <div class="product-card__price" @@if (oldPrice) { data-old-price="@@oldPrice" }>@@price</div>
+    <div class="product-card__price product-price">
+      <div class="product-price__value">@@price</div>
+      @@if (oldPrice) {
+      <div class="product-price__value">@@oldPrice</div>
+      }
+    </div>
     }
     <h3 class="product-card__title">
       <a href="#">@@title</a>
