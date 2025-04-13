@@ -241,7 +241,7 @@ section:has(.swiper) {
   user-select: none;
 }
 
-article {
+article:not(.review-card) {
   padding: 0 !important;
 }
 
@@ -255,4 +255,25 @@ button:is(.compare, .compare-check) {
   inline-size: min(24px, 16px + 8 * ((100vw - 320px) / 1032)) !important;
   block-size: min(24px, 16px + 8 * ((100vw - 320px) / 1032)) !important;
   background: none !important;
+}
+
+button.button {
+  background-color: #ffb74d !important;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: #fff !important;
+    }
+  }
+
+  // .button--transparent
+  &--transparent {
+    background-color: rgba(#ffb74d, 0) !important;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #ffb74d !important;
+      }
+    }
+  }
 }

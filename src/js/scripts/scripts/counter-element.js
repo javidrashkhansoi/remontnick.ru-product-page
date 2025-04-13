@@ -30,10 +30,10 @@ class CounterElement extends HTMLElement {
 
       const { min = 1, max = 10, step = 1, value = 1, } = this.input;
 
-      this.min = parseFloat(min);
-      this.max = parseFloat(max);
-      this.step = parseFloat(step);
-      this.value = parseFloat(value);
+      this.min = parseFloat(min) || 0;
+      this.max = parseFloat(max) || Infinity;
+      this.step = parseFloat(step) || 1;
+      this.value = parseFloat(value) || 1;
 
       this.input.addEventListener('change', this.onChange.bind(this), { signal: this.abortController.signal });
       this.minus.addEventListener('click', this.onMinus.bind(this), { signal: this.abortController.signal });

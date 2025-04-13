@@ -65,6 +65,12 @@
     flex: 0 0 auto;
     font-size: 0;
 
+    .action-button:not(.active) &--no-fill {
+      svg {
+        fill: rgba(variables.$color-hover, 0);
+      }
+    }
+
     @include mixins.prefers-reduced-motion {
       transition-property: --icon-heart-fill, color;
       transition-duration: 0.3s;
