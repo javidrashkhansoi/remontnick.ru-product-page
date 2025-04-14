@@ -313,3 +313,8 @@ a.button {
     }
   }
 }
+
+input[type="checkbox"] {
+  display: inline-block !important;
+  inline-size: auto !important;
+}
