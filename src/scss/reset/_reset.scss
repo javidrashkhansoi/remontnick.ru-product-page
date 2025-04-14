@@ -277,3 +277,39 @@ button.button {
     }
   }
 }
+
+a.button {
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.045em !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  color: #1d1d1d !important;
+  background-color: #ffb74d !important;
+
+  &:focus {
+    text-decoration: none !important;
+    color: #1d1d1d !important;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: none !important;
+      color: #1d1d1d !important;
+      background-color: #fff !important;
+    }
+  }
+
+  // .button--transparent
+  &--transparent {
+    background-color: rgba(#ffb74d, 0) !important;
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: none !important;
+        color: #1d1d1d !important;
+        background-color: #ffb74d !important;
+      }
+    }
+  }
+}
