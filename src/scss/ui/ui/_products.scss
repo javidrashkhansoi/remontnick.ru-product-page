@@ -243,6 +243,15 @@
     text-transform: uppercase;
     color: variables.$color-1d1d1d;
     background-color: variables.$color-f9f9f9;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: background-color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      background-color: variables.$color-hover;
+    }
   }
 }
 
