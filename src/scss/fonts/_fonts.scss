@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Light-Normal.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Gotham Pro";
   src: url("../fonts/Gotham_Pro-Light-Normal.woff2") format("woff2");
   font-weight: 300;
