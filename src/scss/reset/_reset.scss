@@ -91,6 +91,13 @@
       margin: 0;
     }
   }
+
+  &[type="search"]::-webkit-search-decoration,
+  &[type="search"]::-webkit-search-cancel-button,
+  &[type="search"]::-webkit-search-results-button,
+  &[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
 }
 
 :where(button) {
@@ -103,7 +110,7 @@
   vertical-align: top;
 }
 
-.main :where(svg) {
+:where(svg) {
   fill: currentColor;
   stroke: currentColor;
 }

@@ -1,0 +1,157 @@
+<header class="header" id="header" data-header="header" data-burger="wrapper">
+  <div class="header__wrapper" data-header="wrapper" data-fixed>
+    <div class="header-top">
+      <div class="header-top__container container">
+        <div class="header-nav" data-burger="menu">
+          <nav class="header-nav__inner" aria-label="Главная навигация">
+            <div class="header-nav__column">
+              <ul class="header-nav__list">
+                <li class="header-nav__item">
+                  <button class="header-link">
+                    <span class="header-link__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-pin"></use>
+                      </svg>
+                    </span>
+                    <span class="header-link__text">Москва</span>
+                  </button>
+                </li>
+                <li class="header-nav__item">
+                  <a class="header-link" href="#">Шоу-румы</a>
+                </li>
+                <li class="header-nav__item">
+                  <a class="header-link" href="#">Доставка и пункты выдачи</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header-nav__column">
+              <ul class="header-nav__list">
+                <li class="header-nav__item">
+                  <a class="header-link header-link--badge" href="#">Для бизнеса</a>
+                </li>
+                <li class="header-nav__item header-nav__item--dropdown">
+                  <button class="header-link">
+                    <span class="header-link__text">Покупателям</span>
+                    <span class="header-link__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="header-dropdown">
+                    <ul class="header-dropdown__list">
+                      <li class="header-dropdown__link">
+                        <a class="header-dropdown__link dropdown-link" href="#">Услуги</a>
+                      </li>
+                      <li class="header-dropdown__link">
+                        <a class="header-dropdown__link dropdown-link" href="#">Блог</a>
+                      </li>
+                      <li class="header-dropdown__link">
+                        <a class="header-dropdown__link dropdown-link" href="#">Нас выбирают</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header-nav__item">
+                  <a class="header-link" href="#">Оплата</a>
+                </li>
+                <li class="header-nav__item">
+                  <a class="header-link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="header-call">
+            <a class="header-call__link" href="tel:+79504977377">+ 7 (950) 497-73-77</a>
+            <button class="header-call__button">Заказать звонок</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="header-main__container container">
+        <div class="header-main__inner">
+          <div class="header-main__logo header-logo">
+            <a class="header-logo__item ibg" href="/" aria-label="Главная">
+              <img src="@img/logo.svg" alt="">
+            </a>
+          </div>
+          <div class="header-main__row">
+            <div class="header-main__actions header-actions">
+              <button class="header-actions__button button">
+                <span class="button__icon" aria-hidden="true">
+                  <svg width="24" height="24">
+                    <use xlink:href="#icon-grid"></use>
+                  </svg>
+                </span>
+                <span class="button__text">Каталог</span>
+              </button>
+              <search class="header-actions__search header-search" role="search" aria-label="Поиск товара">
+                <form class="header-search__form" id="form-header-search" action="#">
+                  <input class="header-search__input" id="header-search-input" name="header-search-input" type="search" inputmode="search" autocomplete="off" placeholder="Искать товары" required>
+                  <button class="header-search__button" type="submit">
+                    <span class="header-search__icon" aria-hidden="true">
+                      <svg width="22" height="22">
+                        <use xlink:href="#icon-search"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </form>
+              </search>
+              <a class="promotions-link" href="#">
+                <span class="promotions-link__icon" aria-hidden="true">
+                  <svg width="24" height="24">
+                    <use xlink:href="#icon-fire"></use>
+                  </svg>
+                </span>
+                <span class="promotions-link__text">Акции</span>
+              </a>
+            </div>
+            <ul class="icon-links">
+              <li class="icon-links__item">
+                <a class="icon-links__link" href="#">
+                  <span class="icon-links__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-user"></use>
+                    </svg>
+                  </span>
+                  <span class="icon-links__text">Вход / Регистрация</span>
+                </a>
+              </li>
+              <li class="icon-links__item">
+                <a class="icon-links__link" href="#">
+                  <span class="icon-links__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-cart"></use>
+                    </svg>
+                  </span>
+                  <span class="icon-links__text">Корзина</span>
+                </a>
+              </li>
+              <li class="icon-links__item">
+                <a class="icon-links__link" href="#">
+                  <span class="icon-links__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-heart"></use>
+                    </svg>
+                  </span>
+                  <span class="icon-links__text">Избранное</span>
+                </a>
+              </li>
+              <li class="icon-links__item">
+                <a class="icon-links__link" href="#" data-count="2">
+                  <span class="icon-links__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-compare"></use>
+                    </svg>
+                  </span>
+                  <span class="icon-links__text">Списки сравнения</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
