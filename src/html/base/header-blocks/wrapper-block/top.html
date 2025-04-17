@@ -1,8 +1,13 @@
 <div class="header-top">
   <div class="header-top__container container">
-    <div class="header-nav" data-burger="menu">
-      @@include("top-blocks/nav.html")
-      @@include("top-blocks/call.html")
-    </div>
+    <movable-element target="header" to="after" media="(max-width: 1200px)">
+      <div class="header-nav" data-burger="menu">
+        <div class="header-nav__block" id="header-nav-block">
+          @@include("top-blocks/burger-header.html")
+          @@include("top-blocks/nav.html")
+          @@include("top-blocks/call.html")
+        </div>
+      </div>
+    </movable-element>
   </div>
 </div>

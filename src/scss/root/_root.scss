@@ -1,7 +1,16 @@
 @use "../functions/functions";
 
 :root {
-  --header-height: 162px;
-  --header-top-height: 54px;
+  --header-height: 56px;
+  --header-top-height: 0px;
   --header-logo-width: #{functions.responsive-value(193, 102.41)};
+
+  @media (min-width: #{768 + 0.1px}) {
+    --header-height: 64px;
+  }
+
+  @media (min-width: #{1200 + 0.1px}) {
+    --header-height: 162px;
+    --header-top-height: 54px;
+  }
 }

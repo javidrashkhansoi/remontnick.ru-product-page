@@ -6,4 +6,8 @@ body {
   font-size: functions.responsive-value(16, 14);
   line-height: 1.5;
   color: variables.$color-252626;
+
+  .scroll-lock & {
+    overflow: hidden;
+  }
 }

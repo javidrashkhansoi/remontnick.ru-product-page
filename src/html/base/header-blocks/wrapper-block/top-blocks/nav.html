@@ -1,4 +1,4 @@
-<nav class="header-nav__inner" aria-label="Главная навигация">
+<nav class="header-nav__inner" aria-label="Главная навигация" id="header-nav">
   <div class="header-nav__column">
     <ul class="header-nav__list">
       <li class="header-nav__item">
@@ -25,7 +25,7 @@
         <a class="header-link header-link--badge" href="#">Для бизнеса</a>
       </li>
       <li class="header-nav__item header-nav__item--dropdown">
-        <button class="header-link">
+        <button class="header-link" data-dropdown-button="Покупателям">
           <span class="header-link__text">Покупателям</span>
           <span class="header-link__icon" aria-hidden="true">
             <svg width="24" height="24">
@@ -33,19 +33,38 @@
             </svg>
           </span>
         </button>
-        <div class="header-dropdown">
-          <ul class="header-dropdown__list">
-            <li class="header-dropdown__link">
-              <a class="header-dropdown__link dropdown-link" href="#">Услуги</a>
-            </li>
-            <li class="header-dropdown__link">
-              <a class="header-dropdown__link dropdown-link" href="#">Блог</a>
-            </li>
-            <li class="header-dropdown__link">
-              <a class="header-dropdown__link dropdown-link" href="#">Нас выбирают</a>
-            </li>
-          </ul>
-        </div>
+        <movable-element target="header-nav-block" to="after" media="(max-width: 1200px)">
+          <div class="header-dropdown" data-dropdown-inner="Покупателям">
+            <div class="burger-header">
+              <button class="burger-header__back" data-dropdown-close>
+                <span class="burger-header__icon burger-header__icon--reverse" aria-hidden="true">
+                  <svg width="24" height="24">
+                    <use xlink:href="#icon-down"></use>
+                  </svg>
+                </span>
+                <span class="burger-header__label">Покупателям</span>
+              </button>
+              <button class="burger-header__search">
+                <span class="burger-header__icon" aria-hidden="true">
+                  <svg width="24" height="24">
+                    <use xlink:href="#icon-search"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <ul class="header-dropdown__list">
+              <li class="header-dropdown__link">
+                <a class="header-dropdown__link dropdown-link" href="#">Услуги</a>
+              </li>
+              <li class="header-dropdown__link">
+                <a class="header-dropdown__link dropdown-link" href="#">Блог</a>
+              </li>
+              <li class="header-dropdown__link">
+                <a class="header-dropdown__link dropdown-link" href="#">Нас выбирают</a>
+              </li>
+            </ul>
+          </div>
+        </movable-element>
       </li>
       <li class="header-nav__item">
         <a class="header-link" href="#">Оплата</a>
