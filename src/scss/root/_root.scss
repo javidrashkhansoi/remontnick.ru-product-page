@@ -1,4 +1,7 @@
+@use "../functions/functions";
+
 :root {
   --header-height: 162px;
   --header-top-height: 54px;
+  --header-logo-width: #{functions.responsive-value(193, 102.41)};
 }
