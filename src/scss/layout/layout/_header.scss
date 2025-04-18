@@ -230,6 +230,8 @@
     align-items: center;
     gap: 8px;
     margin-inline-end: auto;
+    text-wrap: balance;
+    text-align: start;
     color: variables.$color-1d1d1d;
 
     @include mixins.prefers-reduced-motion {
@@ -992,18 +994,18 @@
     }
   }
 
+  @include mixins.prefers-reduced-motion {
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    color: variables.$color-hover;
+  }
+
   @media (min-width: #{1200 + 0.1px}) {
     .header-nav__block > movable-element > & {
       display: none;
-    }
-
-    @include mixins.prefers-reduced-motion {
-      transition-property: color;
-      transition-duration: 0.3s;
-    }
-
-    @include mixins.hover {
-      color: variables.$color-hover;
     }
   }
 
