@@ -173,6 +173,13 @@
       isolation: isolate;
       z-index: 1;
     }
+
+    // .header-nav__item--hide
+    &--hide {
+      @media (min-width: #{1200 + 0.1px}) {
+        display: none;
+      }
+    }
   }
 }
 
@@ -785,16 +792,50 @@
     isolation: isolate;
   }
 
+  // .header-search__return
+  &__return {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 4px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: 36px;
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+    color: variables.$color-999999;
+    background-color: variables.$color-f6f6f6;
+    transform: translateY(-50%);
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-hover;
+    }
+
+    @media (min-width: #{768 + 0.1px}) {
+      display: none;
+    }
+  }
+
   // .header-search__input
   &__input {
     block-size: 44px;
-    padding-inline: 18px;
+    padding-inline: 48px;
     line-height: 1;
     color: variables.$color-1d1d1d;
     background-color: variables.$color-f6f6f6;
 
     &:focus {
       outline: 2px solid variables.$color-hover;
+    }
+
+    @media (min-width: #{768 + 0.1px}) {
+      padding-inline-start: 18px;
     }
 
     &::placeholder {
@@ -818,8 +859,13 @@
     background-color: variables.$color-white;
     transform: translateY(-50%);
 
+    .header-search__input:not(:placeholder-shown) ~ & {
+      opacity: 0;
+      visibility: hidden;
+    }
+
     @include mixins.prefers-reduced-motion {
-      transition-property: color, background-color;
+      transition-property: color, background-color, opacity, visibility;
       transition-duration: 0.3s;
     }
 
@@ -829,8 +875,35 @@
     }
   }
 
-  // .header-search__icon
-  &__icon {
+  // .header-search__clear
+  &__clear {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-end: 4px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: 36px;
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+    color: variables.$color-999999;
+    background-color: variables.$color-f6f6f6;
+    transform: translateY(-50%);
+
+    .header-search__input:placeholder-shown ~ & {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color, opacity, visibility;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-hover;
+    }
   }
 }
 

@@ -28,6 +28,18 @@
     display: block;
     container-type: inline-size;
   }
+
+  // .products__button
+  &__button {
+    --button-padding: 24px;
+
+    margin-block-start: functions.responsive-value(48, 32);
+
+    @media (min-width: #{768 + 0.1px}) {
+      inline-size: fit-content;
+      margin-inline: auto;
+    }
+  }
 }
 
 .products-slider {
