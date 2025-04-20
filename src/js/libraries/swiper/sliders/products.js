@@ -10,6 +10,8 @@ class ProductsSlider extends HTMLElement {
   next;
   /** @type {Swiper} */
   swiper;
+  /** @type {boolean} */
+  isResult;
 
   constructor() {
     super();
@@ -21,18 +23,25 @@ class ProductsSlider extends HTMLElement {
     if (this.slider) {
       this.prev = this.querySelector('.slider-arrow--prev');
       this.next = this.querySelector('.slider-arrow--next');
+      this.isResult = this.hasAttribute('result');
 
-      this.swiper = new Swiper(this.slider, {
-        modules: [Keyboard, Navigation,],
-        keyboard: {
-          enabled: true,
-          pageUpDown: false,
+      const sliderOptions = this.isResult ? {
+        breakpoints: {
+          '350.1': {
+            slidesPerView: 1.283018868,
+          },
+          '550.1': {
+            slidesPerView: 2,
+          },
+          '768.1': {
+            slidesPerView: 3,
+          },
+          '992.1': {
+            slidesPerView: 4,
+          },
         },
-        navigation: {
-          enabled: true,
-          nextEl: this.next,
-          prevEl: this.prev,
-        },
+        spaceBetween: 16,
+      } : {
         breakpoints: {
           '350.1': {
             slidesPerView: 1.283018868,
@@ -52,8 +61,22 @@ class ProductsSlider extends HTMLElement {
             swiper.params.spaceBetween = this.gap;
           },
         },
-        slidesPerView: 1,
         spaceBetween: this.gap,
+      };
+
+      this.swiper = new Swiper(this.slider, {
+        ...sliderOptions,
+        modules: [Keyboard, Navigation,],
+        keyboard: {
+          enabled: true,
+          pageUpDown: false,
+        },
+        navigation: {
+          enabled: true,
+          nextEl: this.next,
+          prevEl: this.prev,
+        },
+        slidesPerView: 1,
       });
     }
   }
@@ -65,6 +88,7 @@ class ProductsSlider extends HTMLElement {
     this.slider = null;
     this.prev = null;
     this.next = null;
+    this.isResult = null;
   }
 
   get gap() {

@@ -15,7 +15,7 @@
   block-size: 100%;
   font-size: 16px;
   line-height: 1;
-  scrollbar-gutter: auto;
+  scrollbar-gutter: stable;
 }
 
 :where(h1, h2, h3, h4, h5, h6) {
@@ -189,6 +189,7 @@ section :is(h2, div).h2 {
 
 section :is(h3, div).h3 {
   margin: 0 !important;
+  margin-block-end: var(--h3-margin-bottom) !important;
   font-family: "Gotham Pro", sans-serif !important;
   font-weight: 500 !important;
   font-size: min(16px, 14px + 2 * ((100vw - 320px)/1032)) !important;
@@ -204,7 +205,7 @@ section :is(h3, div).h3 {
   display: -webkit-box !important;
 
   block-size: calc(var(--line-count, 3 * 1lh)) !important;
-  margin-block-end: max(12px, 31px + -19 * ((100vw - 320px) / 1032)) !important;
+  margin-block-end: var(--product-title-margin-bottom) !important;
   font-family: "Gotham Pro", sans-serif !important;
   font-size: min(16px, 12px + 4 * ((100vw - 320px) / 1032)) !important;
   font-weight: 400 !important;
@@ -263,6 +264,10 @@ button:is(.compare, .compare-check) {
   inline-size: min(24px, 16px + 8 * ((100vw - 320px) / 1032)) !important;
   block-size: min(24px, 16px + 8 * ((100vw - 320px) / 1032)) !important;
   background: none !important;
+}
+
+.button {
+  font-size: 14px !important;
 }
 
 button.button {
@@ -325,4 +330,9 @@ a.button {
 input[type="checkbox"] {
   display: inline-block !important;
   inline-size: auto !important;
+}
+
+main p {
+  padding: 0;
+  inline-size: auto;
 }

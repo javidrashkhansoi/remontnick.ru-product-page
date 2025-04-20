@@ -78,6 +78,7 @@
 
   // .partner__text
   &__text {
+    font-size: functions.responsive-value(16, 14, $behavior: "fixed-both");
     color: variables.$color-1d1d1d;
 
     @media (min-width: #{768 + 0.1px}) {

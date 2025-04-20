@@ -1,0 +1,39 @@
+<div class="products">
+  @@if (label) {
+  <div class="products__label header-result-label">Популярные товары</div>
+  }
+  <products-slider class="products__slider" result>
+    @@include("products-blocks/arrow-prev.html")
+    <div class="products-slider swiper">
+      <div class="products-slider__wrapper swiper-wrapper">
+        @@loop("products-blocks/slide.html",[
+        {
+        "image": 3
+        },
+        {
+        "image": 4
+        },
+        {
+        "image": 5
+        },
+        {
+        "image": 6
+        },
+        {
+        "image": 3
+        },
+        {
+        "image": 4
+        },
+        {
+        "image": 5
+        },
+        {
+        "image": 6
+        }
+        ])
+      </div>
+    </div>
+    @@include("products-blocks/arrow-next.html")
+  </products-slider>
+</div>

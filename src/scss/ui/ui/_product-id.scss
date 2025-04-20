@@ -11,6 +11,7 @@
   white-space: nowrap;
   color: variables.$color-1d1d1d;
   background-color: variables.$color-ffe0b2;
+  user-select: text;
 
   .actions & {
     @media (max-width: 768px) {

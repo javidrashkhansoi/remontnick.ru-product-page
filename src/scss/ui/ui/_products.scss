@@ -3,7 +3,9 @@
 @use "../../variables/variables";
 
 .products {
-  padding-block: functions.responsive-value(64, 24);
+  &:not(:has([result])) {
+    padding-block: functions.responsive-value(64, 24);
+  }
 
   // .products__container
   &__container {
@@ -12,6 +14,11 @@
   // .products__title
   &__title {
     --h2-margin-bottom: #{functions.responsive-value(32, 24)};
+  }
+
+  // .products__label
+  &__label {
+    margin-block-end: 18px;
   }
 
   // .products__slider
@@ -42,11 +49,19 @@
   flex-direction: column;
   block-size: 100%;
 
+  > *:last-child {
+    margin-block-end: 0;
+  }
+
   // .product-card__top
   &__top {
     position: relative;
     isolation: isolate;
     margin-block-end: 8px;
+
+    .products__slider[result] & {
+      margin-block-end: 16px;
+    }
   }
 
   // .product-card__badges
@@ -76,10 +91,16 @@
   // .product-card__price
   &__price {
     margin-block-end: functions.responsive-value(12.5, 13.5);
+
+    .products__slider[result] & {
+      margin-block-start: auto;
+    }
   }
 
   // .product-card__title
   &__title {
+    --product-title-margin-bottom: #{functions.responsive-value(12, 31)};
+
     @include mixins.limit-lines(3);
 
     margin-block-end: functions.responsive-value(12, 31);
@@ -87,6 +108,12 @@
     line-height: 1.31;
     letter-spacing: 0.01em;
     color: variables.$color-1d1d1d;
+
+    .products__slider[result] & {
+      --product-title-margin-bottom: 12px;
+
+      margin-block-end: 12px;
+    }
 
     a {
       @include mixins.prefers-reduced-motion {
@@ -98,6 +125,11 @@
         color: variables.$color-hover;
       }
     }
+  }
+
+  // .product-card__country
+  &__country {
+    margin-block-end: functions.responsive-value(12.5, 13.5);
   }
 
   // .product-card__info
@@ -224,6 +256,41 @@
       line-height: 1.5;
       text-decoration: line-through;
       color: rgba(29, 29, 29, 0.32);
+    }
+  }
+}
+
+.product-country {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  color: variables.$color-1d1d1d;
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    color: variables.$color-hover;
+  }
+
+  // .product-country__text
+  &__text {
+  }
+
+  // .product-country__image
+  &__image {
+    flex: 0 0 auto;
+    inline-size: 19px;
+    aspect-ratio: 19 / 16;
+    font-size: 0;
+
+    img {
+      object-fit: contain;
     }
   }
 }

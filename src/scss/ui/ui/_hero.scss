@@ -319,6 +319,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 4px;
+    min-inline-size: 70px;
     padding-inline: 4px;
     font-size: 12px; // 12px
     line-height: 2;
@@ -328,6 +329,10 @@
     color: variables.$color-1d1d1d;
     background-color: variables.$color-ededed;
     cursor: pointer;
+
+    &:not(:has(.length__icon)) {
+      justify-content: center;
+    }
 
     &:has(~ .hero-length__radio:checked) {
       &::after {
@@ -464,6 +469,7 @@
 .hero-form {
   display: grid;
   gap: functions.responsive-value(16, 24);
+  user-select: text;
 
   // .hero-form__top
   &__top {
