@@ -1316,6 +1316,27 @@
 
   // .header-catalog-main__item
   &__item {
+    &:has([data-catalog-main]) {
+      @media (min-width: #{992 + 0.1px}) {
+        @media (hover: none) {
+          position: relative;
+          isolation: isolate;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 6px;
+          inline-size: 306px;
+          min-block-size: 44px;
+          padding-block: 5px;
+          padding-inline: 16px;
+
+          &:has(.header-catalog-main-link--active) {
+            background-color: variables.$color-white;
+          }
+        }
+      }
+    }
+
     @media (max-width: 992px) {
       position: relative;
       isolation: isolate;
@@ -1343,7 +1364,9 @@
     color: rgba(29, 29, 29, 0.32);
 
     @media (min-width: #{992 + 0.1px}) {
-      display: none;
+      @media (hover: hover) {
+        display: none;
+      }
     }
 
     &::after {
@@ -1366,16 +1389,28 @@
   // .header-catalog-main-link--active
   &--active {
     @media (min-width: #{992 + 0.1px}) {
-      background-color: variables.$color-white;
+      @media (hover: hover) {
+        background-color: variables.$color-white;
+      }
     }
   }
 
   @media (min-width: #{992 + 0.1px}) {
-    inline-size: 306px;
-    min-block-size: 44px;
-    padding-block: 5px;
-    padding-inline: 16px;
     letter-spacing: 0.04em;
+
+    &:not([data-catalog-main]) {
+      inline-size: 306px;
+      min-block-size: 44px;
+      padding-block: 5px;
+      padding-inline: 16px;
+    }
+
+    @media (hover: hover) {
+      inline-size: 306px;
+      min-block-size: 44px;
+      padding-block: 5px;
+      padding-inline: 16px;
+    }
 
     @include mixins.prefers-reduced-motion {
       transition-property: background-color;
