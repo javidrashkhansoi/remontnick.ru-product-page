@@ -1,6 +1,6 @@
-<div class="header-catalog-main" data-dropdown-inner="Каталог">
-  <div class="burger-header">
-    <button class="burger-header__back" data-dropdown-close>
+<div class="header-catalog-main" data-dropdown-inner>
+  <burger-header class="burger-header">
+    <button class="burger-header__back" aria-label="Назад">
       <span class="burger-header__icon burger-header__icon--reverse" aria-hidden="true">
         <svg width="24" height="24">
           <use xlink:href="#icon-down"></use>
@@ -8,15 +8,15 @@
       </span>
       <span class="burger-header__label">Каталог</span>
     </button>
-    <button class="burger-header__search">
+    <button class="burger-header__search" aria-label="Поиск">
       <span class="burger-header__icon" aria-hidden="true">
         <svg width="24" height="24">
           <use xlink:href="#icon-search"></use>
         </svg>
       </span>
     </button>
-  </div>
-  <ul class="header-catalog-main__list" data-simplebar>
+  </burger-header>
+  <ul class="header-catalog-main__list">
     <li class="header-catalog-main__item">
       <a class="header-catalog-main-link" href="#">
         <span class="header-catalog-main-link__icon" aria-hidden="true">
@@ -27,113 +27,113 @@
         <span class="header-catalog-main-link__text">Акции</span>
       </a>
     </li>
-    <li class="header-catalog-main__item">
-      <a class="header-catalog-main-link header-catalog-main-link--active" href="#" data-catalog-main="Линолеум">Линолеум</a>
-      <button class="header-catalog-main__icon" data-dropdown-button="Линолеум">
+    <li class="header-catalog-main__item active" data-dropdown-button="Линолеум">
+      <a class="header-catalog-main-link" href="#">Линолеум</a>
+      <button class="header-catalog-main__icon" aria-label="Развернуть подкатегории">
         <svg width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-down"></use>
         </svg>
       </button>
     </li>
-    <li class="header-catalog-main__item">
-      <a class="header-catalog-main-link" href="#" data-catalog-main="Ламинат">Ламинат</a>
-      <button class="header-catalog-main__icon" data-dropdown-button="Ламинат">
+    <li class="header-catalog-main__item" data-dropdown-button="Ламинат">
+      <a class="header-catalog-main-link" href="#">Ламинат</a>
+      <button class="header-catalog-main__icon" aria-label="Развернуть подкатегории">
         <svg width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-down"></use>
         </svg>
       </button>
     </li>
-    <li class="header-catalog-main__item">
-      <a class="header-catalog-main-link" href="#" data-catalog-main="Ковролин">Ковролин</a>
-      <button class="header-catalog-main__icon" data-dropdown-button="Ковролин">
+    <li class="header-catalog-main__item" data-dropdown-button="Ковролин">
+      <a class="header-catalog-main-link" href="#">Ковролин</a>
+      <button class="header-catalog-main__icon" aria-label="Развернуть подкатегории">
         <svg width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-down"></use>
         </svg>
       </button>
     </li>
-    <li class="header-catalog-main__item">
-      <a class="header-catalog-main-link" href="#" data-catalog-main="Грязезащитные покрытия">Грязезащитные покрытия</a>
-      <button class="header-catalog-main__icon" data-dropdown-button="Грязезащитные покрытия">
+    <li class="header-catalog-main__item" data-dropdown-button="Грязезащитные покрытия">
+      <a class="header-catalog-main-link" href="#">Грязезащитные покрытия</a>
+      <button class="header-catalog-main__icon" aria-label="Развернуть подкатегории">
         <svg width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-down"></use>
         </svg>
       </button>
     </li>
-    <li class="header-catalog-main__item">
-      <a class="header-catalog-main-link" href="#" data-catalog-main="Пробковые покрытия">Пробковые покрытия</a>
-      <button class="header-catalog-main__icon" data-dropdown-button="Пробковые покрытия">
+    <li class="header-catalog-main__item" data-dropdown-button="Пробковые покрытия">
+      <a class="header-catalog-main-link" href="#">Пробковые покрытия</a>
+      <button class="header-catalog-main__icon" aria-label="Развернуть подкатегории">
         <svg width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-down"></use>
         </svg>
       </button>
     </li>
-    <li class="header-catalog-main__item">
-      <a class="header-catalog-main-link" href="#" data-catalog-main="Виниловая плитка (ПВХ)">Виниловая плитка (ПВХ)</a>
-      <button class="header-catalog-main__icon" data-dropdown-button="Виниловая плитка (ПВХ)">
+    <li class="header-catalog-main__item" data-dropdown-button="Виниловая плитка (ПВХ)">
+      <a class="header-catalog-main-link" href="#">Виниловая плитка (ПВХ)</a>
+      <button class="header-catalog-main__icon" aria-label="Развернуть подкатегории">
         <svg width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-down"></use>
         </svg>
       </button>
     </li>
-    <li class="header-catalog-main__item">
-      <a class="header-catalog-main-link" href="#" data-catalog-main="Паркетная доска">Паркетная доска</a>
-      <button class="header-catalog-main__icon" data-dropdown-button="Паркетная доска">
+    <li class="header-catalog-main__item" data-dropdown-button="Паркетная доска">
+      <a class="header-catalog-main-link" href="#">Паркетная доска</a>
+      <button class="header-catalog-main__icon" aria-label="Развернуть подкатегории">
         <svg width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-down"></use>
         </svg>
       </button>
     </li>
-    <li class="header-catalog-main__item">
-      <a class="header-catalog-main-link" href="#" data-catalog-main="Искусственная трава">Искусственная трава</a>
-      <button class="header-catalog-main__icon" data-dropdown-button="Искусственная трава">
+    <li class="header-catalog-main__item" data-dropdown-button="Искусственная трава">
+      <a class="header-catalog-main-link" href="#">Искусственная трава</a>
+      <button class="header-catalog-main__icon" aria-label="Развернуть подкатегории">
         <svg width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-down"></use>
         </svg>
       </button>
     </li>
-    <li class="header-catalog-main__item">
-      <a class="header-catalog-main-link" href="#" data-catalog-main="Кварцвиниловая плитка (SPC)">Кварцвиниловая плитка (SPC)</a>
-      <button class="header-catalog-main__icon" data-dropdown-button="Кварцвиниловая плитка (SPC)">
+    <li class="header-catalog-main__item" data-dropdown-button="Кварцвиниловая плитка (SPC)">
+      <a class="header-catalog-main-link" href="#">Кварцвиниловая плитка (SPC)</a>
+      <button class="header-catalog-main__icon" aria-label="Развернуть подкатегории">
         <svg width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-down"></use>
         </svg>
       </button>
     </li>
-    <li class="header-catalog-main__item">
-      <a class="header-catalog-main-link" href="#" data-catalog-main="Ковровая плитка">Ковровая плитка</a>
-      <button class="header-catalog-main__icon" data-dropdown-button="Ковровая плитка">
+    <li class="header-catalog-main__item" data-dropdown-button="Ковровая плитка">
+      <a class="header-catalog-main-link" href="#">Ковровая плитка</a>
+      <button class="header-catalog-main__icon" aria-label="Развернуть подкатегории">
         <svg width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-down"></use>
         </svg>
       </button>
     </li>
-    <li class="header-catalog-main__item">
-      <a class="header-catalog-main-link" href="#" data-catalog-main="Ковры">Ковры</a>
-      <button class="header-catalog-main__icon" data-dropdown-button="Ковры">
+    <li class="header-catalog-main__item" data-dropdown-button="Ковры">
+      <a class="header-catalog-main-link" href="#">Ковры</a>
+      <button class="header-catalog-main__icon" aria-label="Развернуть подкатегории">
         <svg width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-down"></use>
         </svg>
       </button>
     </li>
-    <li class="header-catalog-main__item">
-      <a class="header-catalog-main-link" href="#" data-catalog-main="Плинтус и фурнитура">Плинтус и фурнитура</a>
-      <button class="header-catalog-main__icon" data-dropdown-button="Плинтус и фурнитура">
+    <li class="header-catalog-main__item" data-dropdown-button="Плинтус и фурнитура">
+      <a class="header-catalog-main-link" href="#">Плинтус и фурнитура</a>
+      <button class="header-catalog-main__icon" aria-label="Развернуть подкатегории">
         <svg width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-down"></use>
         </svg>
       </button>
     </li>
-    <li class="header-catalog-main__item">
-      <a class="header-catalog-main-link" href="#" data-catalog-main="Клей">Клей</a>
-      <button class="header-catalog-main__icon" data-dropdown-button="Клей">
+    <li class="header-catalog-main__item" data-dropdown-button="Клей">
+      <a class="header-catalog-main-link" href="#">Клей</a>
+      <button class="header-catalog-main__icon" aria-label="Развернуть подкатегории">
         <svg width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-down"></use>
         </svg>
       </button>
     </li>
-    <li class="header-catalog-main__item">
-      <a class="header-catalog-main-link" href="#" data-catalog-main="Подложка">Подложка</a>
-      <button class="header-catalog-main__icon" data-dropdown-button="Подложка">
+    <li class="header-catalog-main__item" data-dropdown-button="Подложка">
+      <a class="header-catalog-main-link" href="#">Подложка</a>
+      <button class="header-catalog-main__icon" aria-label="Развернуть подкатегории">
         <svg width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-down"></use>
         </svg>

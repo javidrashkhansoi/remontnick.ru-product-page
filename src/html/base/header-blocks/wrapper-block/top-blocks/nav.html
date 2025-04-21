@@ -2,20 +2,10 @@
   <div class="header-nav__column">
     <ul class="header-nav__list">
       <li class="header-nav__item">
-        <button class="header-link">
-          <span class="header-link__icon" aria-hidden="true">
-            <svg width="24" height="24">
-              <use xlink:href="#icon-pin"></use>
-            </svg>
-          </span>
-          <span class="header-link__text">Москва</span>
-        </button>
+        <a class="header-link" href="#">Доставка и самовывоз</a>
       </li>
       <li class="header-nav__item">
-        <a class="header-link" href="#">Шоу-румы</a>
-      </li>
-      <li class="header-nav__item">
-        <a class="header-link" href="#">Доставка и пункты выдачи</a>
+        <a class="header-link" href="#">Шоу-рум</a>
       </li>
     </ul>
   </div>
@@ -35,8 +25,8 @@
         </button>
         <movable-element target="header-nav-block" to="after" media="(max-width: 1200px)">
           <div class="header-dropdown" data-dropdown-inner="Покупателям">
-            <div class="burger-header">
-              <button class="burger-header__back" data-dropdown-close>
+            <burger-header class="burger-header">
+              <button class="burger-header__back" aria-label="Назад">
                 <span class="burger-header__icon burger-header__icon--reverse" aria-hidden="true">
                   <svg width="24" height="24">
                     <use xlink:href="#icon-down"></use>
@@ -44,14 +34,14 @@
                 </span>
                 <span class="burger-header__label">Покупателям</span>
               </button>
-              <button class="burger-header__search">
+              <button class="burger-header__search" aria-label="Поиск">
                 <span class="burger-header__icon" aria-hidden="true">
                   <svg width="24" height="24">
                     <use xlink:href="#icon-search"></use>
                   </svg>
                 </span>
               </button>
-            </div>
+            </burger-header>
             <ul class="header-dropdown__list">
               <li class="header-dropdown__link">
                 <a class="header-dropdown__link dropdown-link" href="#">Услуги</a>

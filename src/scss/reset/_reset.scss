@@ -147,6 +147,10 @@
   display: contents;
 }
 
+:where(catalog-button) {
+  display: contents;
+}
+
 main.main.wrapper {
   padding-inline: 0 !important;
 }

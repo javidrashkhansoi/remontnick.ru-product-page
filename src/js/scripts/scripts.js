@@ -1,9 +1,12 @@
 import "./scripts/header-observers.js";
 import "./scripts/header-top-height.js";
-import "./scripts/catalog.js";
+// import "./scripts/catalog.js";
+import "./scripts/catalog-button.js";
+import "./scripts/catalog-block.js";
+import "./scripts/burger-header.js";
 import "./scripts/search.js";
 import "./scripts/burger.js";
-import "./scripts/dropdown.js";
+// import "./scripts/dropdown.js";
 import "./scripts/action-button.js";
 import "./scripts/length-element.js";
 import "./scripts/tabs-element.js";
