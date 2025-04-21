@@ -22,26 +22,28 @@
     </catalog-button>
   </movable-element>
   <movable-element target="header-result" to="start">
-    <search class="header-actions__search header-search" role="search" aria-label="Поиск товара">
-      <form class="header-search__form" id="form-header-search" action="#">
-        <button class="header-search__return" type="button" aria-label="Закрыть поиск">
-          <svg width="22" height="22" aria-hidden="true">
-            <use xlink:href="#icon-return"></use>
-          </svg>
-        </button>
-        <input class="header-search__input" id="header-search-input" name="header-search-input" type="search" inputmode="search" autocomplete="off" placeholder="Искать товары" required>
-        <button class="header-search__button" type="submit" aria-label="Поиск">
-          <svg width="22" height="22" aria-hidden="true">
-            <use xlink:href="#icon-search"></use>
-          </svg>
-        </button>
-        <button class="header-search__clear" type="button" aria-label="Очистить поле">
-          <svg width="22" height="22" aria-hidden="true">
-            <use xlink:href="#icon-close"></use>
-          </svg>
-        </button>
-      </form>
-    </search>
+    <search-block>
+      <search class="header-actions__search header-search" role="search" aria-label="Поиск товара">
+        <form class="header-search__form" id="form-header-search" action="#">
+          <button class="header-search__return" type="button" aria-label="Закрыть поиск">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="#icon-return"></use>
+            </svg>
+          </button>
+          <input class="header-search__input" id="header-search-input" name="header-search-input" type="search" inputmode="search" autocomplete="off" placeholder="Искать товары" required>
+          <button class="header-search__clear" type="button" aria-label="Очистить поле">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+          <button class="header-search__button" type="submit" aria-label="Поиск">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </button>
+        </form>
+      </search>
+    </search-block>
   </movable-element>
   <movable-element target="promotions-link-placeholder" media="(max-width: 992px)">
     <a class="promotions-link" href="#">

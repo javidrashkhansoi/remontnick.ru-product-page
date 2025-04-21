@@ -821,7 +821,7 @@
   // .header-search__input
   &__input {
     block-size: 44px;
-    padding-inline: 48px;
+    padding-inline: 44px 88px;
     line-height: 1;
     color: variables.$color-1d1d1d;
     background-color: variables.$color-f6f6f6;
@@ -839,43 +839,11 @@
     }
   }
 
-  // .header-search__button
-  &__button {
-    position: absolute;
-    inset-block-start: 50%;
-    inset-inline-end: 4px;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    inline-size: 36px;
-    aspect-ratio: 1 / 1;
-    font-size: 0;
-    color: variables.$color-fb8c00;
-    background-color: variables.$color-white;
-    transform: translateY(-50%);
-
-    .header-search__input:not(:placeholder-shown) ~ & {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    @include mixins.prefers-reduced-motion {
-      transition-property: color, background-color, opacity, visibility;
-      transition-duration: 0.3s;
-    }
-
-    @include mixins.hover {
-      color: variables.$color-1d1d1d;
-      background-color: variables.$color-hover;
-    }
-  }
-
   // .header-search__clear
   &__clear {
     position: absolute;
     inset-block-start: 50%;
-    inset-inline-end: 4px;
+    inset-inline-end: 44px;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -899,6 +867,33 @@
 
     @include mixins.hover {
       color: variables.$color-hover;
+    }
+  }
+
+  // .header-search__button
+  &__button {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-end: 4px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: 36px;
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+    color: variables.$color-fb8c00;
+    background-color: variables.$color-white;
+    transform: translateY(-50%);
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color, background-color, opacity, visibility;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-1d1d1d;
+      background-color: variables.$color-hover;
     }
   }
 }
@@ -1703,8 +1698,10 @@
     padding-block: 16px functions.responsive-value(48, 24);
     padding-inline: 16px;
 
-    @media (min-width: #{768 + 0.1px}) {
-      padding-block-start: functions.responsive-value(35, 32);
+    html:not(.scrolled) & {
+      @media (min-width: #{1200 + 0.1px}) {
+        padding-block-start: 0;
+      }
     }
 
     @media (min-width: #{1312 + 0.1px}) {

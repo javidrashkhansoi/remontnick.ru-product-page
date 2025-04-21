@@ -4,6 +4,7 @@ import "./scripts/header-top-height.js";
 import "./scripts/catalog-button.js";
 import "./scripts/catalog-block.js";
 import "./scripts/burger-header.js";
+import "./scripts/search-block.js";
 import "./scripts/search.js";
 import "./scripts/burger.js";
 // import "./scripts/dropdown.js";

@@ -151,6 +151,10 @@
   display: contents;
 }
 
+:where(search-block) {
+  display: contents;
+}
+
 main.main.wrapper {
   padding-inline: 0 !important;
 }

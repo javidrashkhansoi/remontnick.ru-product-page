@@ -1,12 +1,12 @@
 const headerResult = document.querySelector('.header-result');
 
 if (headerResult) {
-  const headerSearchInput = document.querySelector('.header-search__input');
+  // const headerSearchInput = document.querySelector('.header-search__input');
   const searchOpeners = document.querySelectorAll('.header-icon--search, .burger-header__search');
 
-  headerSearchInput?.addEventListener('focus', () => {
-    showSearchResult();
-  });
+  // headerSearchInput?.addEventListener('focus', () => {
+  //   showSearchResult();
+  // });
 
   searchOpeners.forEach(searchOpener => {
     searchOpener.addEventListener('click', () => {
