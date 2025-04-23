@@ -826,10 +826,6 @@
     color: variables.$color-1d1d1d;
     background-color: variables.$color-f6f6f6;
 
-    &:focus {
-      outline: 2px solid variables.$color-hover;
-    }
-
     @media (min-width: #{768 + 0.1px}) {
       padding-inline-start: 18px;
     }
@@ -1680,8 +1676,7 @@
 
   @media (min-width: #{1352 + 0.1px}) {
     inset-block-start: calc(var(--header-height) - 24px);
-    inset-inline: max((100cqi - 1320px) / 2 + var(--header-logo-width) + 32px, 0px)
-      max((100cqi - 1320px) / 2 + 36px, 0px);
+    inset-inline: max((100vw - 1320px) / 2 + var(--header-logo-width) + 32px, 0px) max((100vw - 1320px) / 2 + 36px, 0px);
     max-block-size: calc(100% - (var(--header-height) - 24px));
     box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.2);
 
