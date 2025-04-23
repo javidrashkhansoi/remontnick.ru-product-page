@@ -367,6 +367,10 @@
       position: relative;
       z-index: 1;
       flex: 1 1 auto;
+
+      &:has(~ .length__icon) {
+        padding-inline-start: 4px;
+      }
     }
 
     // .length__icon
