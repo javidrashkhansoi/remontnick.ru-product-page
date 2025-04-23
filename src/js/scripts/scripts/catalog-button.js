@@ -142,7 +142,7 @@ class CatalogButton extends HTMLElement {
 
   /** @returns {NodeListOf<HTMLElement>} */
   get inertElements() {
-    return document.querySelectorAll('#header ~ *:not(catalog-block)');
+    return document.querySelectorAll('#header ~ *:not(movable-element:has(catalog-block))');
   }
 }
 
