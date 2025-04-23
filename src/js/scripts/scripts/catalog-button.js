@@ -9,6 +9,8 @@ class CatalogButton extends HTMLElement {
   catalogFirstLink;
   /** @type {MediaQueryList} */
   isDesktop = matchMedia('(min-width: 992.1px)');
+  /** @type {NodeListOf<HTMLElement>} */
+  inertedElements;
   /** @type {AbortController} */
   abortController;
   /** @type {AbortController} */
@@ -56,6 +58,8 @@ class CatalogButton extends HTMLElement {
     if (matches) {
       this.desktopEvents();
     } else {
+      this.hide();
+
       this.mobileEvents();
     }
   }
@@ -65,24 +69,26 @@ class CatalogButton extends HTMLElement {
       this.catalogFirstLink = this.catalog.querySelector('a');
 
       this.button.addEventListener('click', () => {
-        this.button.classList.toggle('active');
-        this.catalog.classList.toggle('active');
+        if (this.button.classList.contains('active')) {
+          this.hide();
+        } else {
+          this.show();
+        }
       }, { signal: this.abortController.signal });
 
       document.addEventListener('keydown', (event) => {
         const { key } = event;
 
         if (key === 'Escape') {
-          this.button.classList.remove('active');
-          this.catalog.classList.remove('active');
+          this.hide();
         }
       }, { signal: this.abortController.signal });
 
       if (this.catalogFirstLink) {
         this.button.addEventListener('keydown', (event) => {
-          const { key } = event;
+          const { key, shiftKey } = event;
 
-          if (key === 'Tab' && this.catalog.classList.contains('active')) {
+          if (!shiftKey && key === 'Tab' && this.catalog.classList.contains('active')) {
             event.preventDefault();
 
             this.catalogFirstLink.focus();
@@ -108,6 +114,35 @@ class CatalogButton extends HTMLElement {
         this.catalogMainBlock.classList.add('active');
       }, { signal: this.abortController.signal });
     }
+  }
+
+  show() {
+    this.button.classList.add('active');
+    this.catalog.classList.add('active');
+
+    if (this.inertElements) {
+      this.inertedElements = this.inertElements;
+
+      this.inertElements.forEach((element) => {
+        element.inert = true;
+      });
+    }
+  }
+
+  hide() {
+    this.button.classList.remove('active');
+    this.catalog.classList.remove('active');
+
+    if (this.inertedElements) {
+      this.inertedElements.forEach((element) => {
+        element.inert = false;
+      });
+    }
+  }
+
+  /** @returns {NodeListOf<HTMLElement>} */
+  get inertElements() {
+    return document.querySelectorAll('#header ~ *:not(catalog-block)');
   }
 }
 

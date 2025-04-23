@@ -1,7 +1,9 @@
-<div class="header-result" id="header-result">
-  <div class="header-result__inner">
-    @@include("result-blocks/links-v1.html")
-    @@include("result-blocks/popular.html", { "label": true })
-    @@include("result-blocks/products.html", { "label": true })
+<movable-element target="header" to="after" media="(max-width: 1352px)">
+  <div class="header-result" id="header-result">
+    <div class="header-result__inner">
+      @@include("result-blocks/links-v1.html")
+      @@include("result-blocks/popular.html", { "label": true })
+      @@include("result-blocks/products.html", { "label": true })
+    </div>
   </div>
-</div>
+</movable-element>
