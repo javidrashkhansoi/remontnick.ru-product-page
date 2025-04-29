@@ -1,0 +1,13 @@
+#panel {
+  position: relative;
+  z-index: 3;
+
+  .scrolled & {
+    transform: translateY(var(--header-top-height));
+  }
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: transform;
+    transition-duration: 0.3s;
+  }
+}
