@@ -2,7 +2,7 @@ import * as _ from "../index.js";
 
 const config = {
   path: {
-    src: `${_.path.src}/js/script.js`,
+    src: `${_.path.src}/js/ui.js`,
     watch: `${_.path.src}/js/**/*.js`,
     dest: `${_.path.dest}/js`,
   },
@@ -29,7 +29,8 @@ const config = {
           ],
         },
         entry: {
-          script: "./src/js/script.js",
+          ui: "./src/js/ui.js",
+          product: "./src/js/product.js",
         },
         output: {
           filename: !isDev && !isMinimize ? "[name].js" : "[name].min.js",

@@ -1,6 +1,6 @@
-@use "../../functions/functions";
-@use "../../mixins/mixins";
-@use "../../variables/variables";
+@use "../../../functions/functions";
+@use "../../../mixins/mixins";
+@use "../../../variables/variables";
 
 .product-information {
   padding-block: functions.responsive-value(64, 48) functions.responsive-value(64, 24);

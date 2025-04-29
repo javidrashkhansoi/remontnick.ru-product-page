@@ -2,7 +2,7 @@ import * as _ from "../index.js";
 
 const config = {
   path: {
-    src: `${_.path.src}/scss/style.scss`,
+    src: `${_.path.src}/scss/{product,ui}.scss`,
     watch: `${_.path.src}/scss/**/*.scss`,
     dest: `${_.path.dest}/css`,
   },

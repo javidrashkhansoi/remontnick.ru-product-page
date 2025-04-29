@@ -1,5 +1,4 @@
-import Swiper from 'swiper';
-import { Keyboard, Navigation, Scrollbar, Thumbs, } from 'swiper/modules';
+const { Swiper, modules: { Keyboard, Navigation, Scrollbar, Thumbs, } } = window.__remontnick__.swiper;
 
 class HeroSliders extends HTMLElement {
   /** @type {HTMLDivElement} */

@@ -1,5 +1,4 @@
-import Swiper from 'swiper';
-import { Pagination, } from 'swiper/modules';
+const { Swiper, modules: { Pagination, } } = window.__remontnick__.swiper;
 
 class ProductImages extends HTMLElement {
   /** @type {HTMLDivElement} */

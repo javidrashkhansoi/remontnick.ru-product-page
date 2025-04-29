@@ -31,7 +31,6 @@ const menuLabel = $menu?.ariaLabel || $menu?.querySelector("nav")?.ariaLabel;
 class Burger {
   #a11y;
   #breakpoint;
-  #inertingElements;
   #matchMedia;
   #onClickOutside = this.#closeOnClickOutside.bind(this);
   #onClose = this.close.bind(this);
@@ -57,7 +56,6 @@ class Burger {
         moveMenu: options.a11y?.moveMenu ?? false,
         wrapperSelector: options.a11y?.wrapperSelector ?? wrapper
       }
-      this.#inertingElements = document.querySelectorAll(this.#a11y.inertElementsSelectors);
 
       this.#init();
     }
@@ -204,7 +202,7 @@ class Burger {
         buttons.$open.focus();
       }
 
-      this.#inertingElements?.forEach(inertElement => {
+      document.querySelectorAll('[inert]').forEach(inertElement => {
         inertElement.removeAttribute("inert");
       });
 
@@ -232,6 +230,11 @@ class Burger {
     } else {
       if (!target.closest(this.#a11y.wrapperSelector) && !target.closest(open) && !target.closest(menu)) this.close();
     }
+  }
+
+  /** @returns {NodeListOf<HTMLElement>} */
+  get #inertingElements() {
+    return document.querySelectorAll(this.#a11y.inertElementsSelectors);
   }
 }
 

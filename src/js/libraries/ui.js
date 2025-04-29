@@ -1,2 +1,2 @@
 import "./movablement/movablement.js";
-import "./swiper/swiper.js";
+import "./swiper/ui.js";

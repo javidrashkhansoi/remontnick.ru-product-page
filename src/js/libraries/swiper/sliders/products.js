@@ -1,5 +1,4 @@
-import Swiper from 'swiper';
-import { Keyboard, Navigation, } from 'swiper/modules';
+const { Swiper, modules: { Keyboard, Navigation, } } = window.__remontnick__.swiper;
 
 class ProductsSlider extends HTMLElement {
   /** @type {HTMLDivElement} */

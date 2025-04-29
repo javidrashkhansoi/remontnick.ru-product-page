@@ -2,7 +2,8 @@
 <html lang="ru">
 
 @@include("base/head.html", {
-"title": "Главная"
+"title": "Главная",
+"product": false
 })
 
 <body>
@@ -14,7 +15,9 @@
     </main>
     @@include("base/footer.html")
   </div>
-  @@include("base/js.html")
+  @@include("base/js.html", {
+  "product": false
+  })
 </body>
 
 </html>

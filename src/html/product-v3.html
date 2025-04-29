@@ -2,7 +2,8 @@
 <html lang="ru">
 
 @@include("base/head.html", {
-"title": "Линолеум Бытовой, Tarkett, коллекция Praktika, «Bruno 1»"
+"title": "Линолеум Бытовой, Tarkett, коллекция Praktika, «Bruno 1»",
+"product": true
 })
 
 <body>
@@ -14,7 +15,9 @@
       @@include("pages/v3/v3.html")
     </main>
   </div>
-  @@include("base/js.html")
+  @@include("base/js.html", {
+  "product": true
+  })
 </body>
 
 </html>
