@@ -111,6 +111,10 @@
   vertical-align: top;
 }
 
+:where(address) {
+  font-style: normal;
+}
+
 :where(svg) {
   fill: currentColor;
   stroke: currentColor;
