@@ -1651,6 +1651,12 @@
     visibility: hidden;
   }
 
+  .header-search & {
+    @media (min-width: 0px) {
+      display: none;
+    }
+  }
+
   // .header-result--show
   &--show {
     body:has(&) {

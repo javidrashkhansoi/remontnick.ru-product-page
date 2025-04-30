@@ -3,7 +3,7 @@
 @use "../../variables/variables";
 
 .top {
-  padding-block: functions.responsive-value(31, 24) 8px;
+  padding-block: 8px;
 
   @media (max-width: 768px) {
     padding-block-end: functions.responsive-value(23, 16);

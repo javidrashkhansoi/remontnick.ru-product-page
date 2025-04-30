@@ -1,0 +1,66 @@
+<div class="header-main__actions header-actions">
+  <movable-element target="catalog-button-placeholder" media="(max-width: 992px)">
+    <catalog-button>
+      <button class="header-catalog-button">
+        <span class="header-catalog-button__icon header-catalog-button__icon--default" aria-hidden="true">
+          <svg width="24" height="24">
+            <use xlink:href="#icon-grid"></use>
+          </svg>
+        </span>
+        <span class="header-catalog-button__icon header-catalog-button__icon--active" aria-hidden="true">
+          <svg width="24" height="24">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </span>
+        <span class="header-catalog-button__text">Каталог</span>
+        <span class="header-catalog-button__icon header-catalog-button__icon--down" aria-hidden="true">
+          <svg width="24" height="24">
+            <use xlink:href="#icon-down"></use>
+          </svg>
+        </span>
+      </button>
+    </catalog-button>
+  </movable-element>
+  <movable-element target="header-result" to="start">
+    <search-block>
+      <search class="header-actions__search header-search" role="search" aria-label="Поиск товара">
+        <form class="header-search__form" id="form-header-search" action="#">
+          <button class="header-search__return" type="button" aria-label="Закрыть поиск">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="#icon-return"></use>
+            </svg>
+          </button>
+          <input class="header-search__input" id="header-search-input" name="header-search-input" type="search" inputmode="search" autocomplete="off" placeholder="Искать товары" required>
+          <button class="header-search__clear" type="button" aria-label="Очистить поле">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+          <button class="header-search__button" type="submit" aria-label="Поиск">
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </button>
+        </form>
+        <movable-element target="header" media="(min-width: 0px)">
+          @@include("result-blocks/result-v3.html")
+        </movable-element>
+      </search>
+    </search-block>
+  </movable-element>
+  <movable-element target="promotions-link-placeholder" media="(max-width: 992px)">
+    <a class="promotions-link" href="#">
+      <span class="promotions-link__icon" aria-hidden="true">
+        <svg width="24" height="24">
+          <use xlink:href="#icon-fire"></use>
+        </svg>
+      </span>
+      <span class="promotions-link__text">Акции</span>
+      <span class="promotions-link__icon promotions-link__icon--down" aria-hidden="true">
+        <svg width="24" height="24">
+          <use xlink:href="#icon-down"></use>
+        </svg>
+      </span>
+    </a>
+  </movable-element>
+</div>
