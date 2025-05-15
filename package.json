@@ -1,5 +1,5 @@
 {
-  "name": "@remontnick.ru/product-page",
+  "name": "remontnick.ru",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -60,7 +60,6 @@
     "movablement": "^2.1.1",
     "require-dir": "^1.2.0",
     "sass": "^1.69.5",
-    "simplebar": "^6.3.0",
     "style-loader": "^3.3.3",
     "swiper": "^11.2.6",
     "terser-webpack-plugin": "^5.3.9",
