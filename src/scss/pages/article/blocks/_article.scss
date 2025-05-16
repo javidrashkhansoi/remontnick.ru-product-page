@@ -380,52 +380,25 @@
   padding: 16px;
   background-color: variables.$color-fff8ed;
 
-  @container (min-width: 488.1px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @container (min-width: 456.1px) {
-    .article-ads__content {
-      padding: functions.responsive-value(24, 0);
-    }
-  }
-
-  @container (max-width: 456px) {
-    .article-ads__content {
-      align-items: center;
-    }
-
-    .article-ads__text {
-      text-align: center;
-    }
-
-    .article-ads__button {
-      inline-size: 100%;
-    }
-
-    .article-ads__image {
-      aspect-ratio: 256 / 188;
-    }
-  }
-
-  &:not(&--reversed) {
-    @container (max-width: 456px) {
-      .article-ads__image {
-        order: -1;
-      }
-    }
-  }
-
   // .article-ads--reversed
   &--reversed {
+  }
+
+  @media (min-width: #{550 + 0.1px}) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   // .article-ads__content
   &__content {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     gap: functions.responsive-value(32, 16);
+
+    @media (min-width: #{550 + 0.1px}) {
+      align-items: start;
+      padding: functions.responsive-value(24, 0);
+    }
   }
 
   // .article-ads__text
@@ -454,6 +427,10 @@
       line-height: 1.46;
     }
 
+    @media (max-width: 550px) {
+      text-align: center;
+    }
+
     span {
       white-space: nowrap;
     }
@@ -462,15 +439,29 @@
   // .article-ads__button
   &__button {
     --button-padding: 16px;
+
+    @media (max-width: 550px) {
+      inline-size: 100%;
+    }
   }
 
   // .article-ads__image
   &__image {
-    aspect-ratio: 405 / 194;
+    aspect-ratio: 256 / 188;
     font-size: 0;
+
+    .article-ads:not(.article-ads--reversed) & {
+      @media (max-width: 550px) {
+        order: -1;
+      }
+    }
 
     .article-ads--reversed & {
       order: -1;
+    }
+
+    @media (min-width: #{550 + 0.1px}) {
+      aspect-ratio: 405 / 194;
     }
   }
 }
@@ -645,20 +636,18 @@
   align-items: center;
   gap: 24px;
 
-  @container (min-width: 520.1px) {
+  @media (min-width: #{550 + 0.1px}) {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  @container (max-width: 520px) {
-    .article-row__image {
-      aspect-ratio: 288 / 188;
-    }
   }
 
   // .article-row__image
   &__image {
-    aspect-ratio: 421 / 224;
+    aspect-ratio: 288 / 188;
     font-size: 0;
+
+    @media (min-width: #{550 + 0.1px}) {
+      aspect-ratio: 421 / 224;
+    }
   }
 
   // .article-row__text
