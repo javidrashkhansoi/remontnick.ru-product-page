@@ -73,6 +73,7 @@
     position: absolute;
     inset: 0;
     z-index: -2;
+    font-size: 0;
 
     @include mixins.prefers-reduced-motion {
       transition-property: transform;

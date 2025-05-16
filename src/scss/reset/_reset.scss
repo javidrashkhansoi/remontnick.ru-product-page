@@ -73,6 +73,8 @@
 }
 
 :where(html) {
+  scroll-padding-block-start: calc(var(--header-height) - var(--header-top-height));
+
   @media (prefers-reduced-motion: no-preference) {
     interpolate-size: allow-keywords;
     scroll-behavior: smooth;
@@ -266,7 +268,7 @@ section:has(.swiper) {
 }
 
 article:not(.review-card) {
-  padding: 0 !important;
+  padding: var(--article-padding, 0px) !important;
 }
 
 button {

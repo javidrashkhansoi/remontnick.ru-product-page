@@ -1,0 +1,14 @@
+<div class="article__ads article-ads @@if (reversed) { article-ads--reversed }">
+  <div class="article-ads__content">
+    @@if (button) {
+    <div class="article-ads__text">Широкий выбор ламината&#32;<span>от 441 руб./м</span></div>
+    <a class="article-ads__button button" href="#">Перейти в каталог</a>
+    }
+    @@if (!button) {
+    <a class="article-ads__text" href="#">Широкий выбор ламината&#32;<span>от 441 руб./м</span></a>
+    }
+  </div>
+  <div class="article-ads__image ibg">
+    <img src="@img/images/pages/article/ads/@@image.jpg" alt="#" loading="lazy">
+  </div>
+</div>

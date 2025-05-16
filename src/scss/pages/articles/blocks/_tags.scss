@@ -1,0 +1,41 @@
+@use "../../../functions/functions";
+@use "../../../mixins/mixins";
+@use "../../../variables/variables";
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+
+  // .article-tags__item
+  &__item {
+  }
+
+  // .article-tags__link
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-block-size: 24px;
+    padding-block: 2px;
+    padding-inline: 8px;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: variables.$color-1d1d1d;
+    border: 1px solid variables.$color-dadada;
+    border-radius: 100px;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: background-color, border-color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      background-color: variables.$color-hover;
+      border-color: variables.$color-hover;
+    }
+  }
+}
